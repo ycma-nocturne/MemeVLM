@@ -1,0 +1,44 @@
+{
+  "protocol_id": "reference_reuse_v1",
+  "metadata": {
+    "revision": "d421198c5fd8108b17d336a5d1e8a7c229bd2b1f",
+    "sha256": "9abb2951ea6f2e681207e4b2917514f69e4c5b45426ef9fbc5326bbdfa837010"
+  },
+  "model_ids": [
+    "Qwen/Qwen3-VL-4B-Instruct",
+    "Qwen/Qwen3-VL-8B-Instruct"
+  ],
+  "judge_model": "OpenGVLab/InternVL3-9B",
+  "design": {
+    "families": 60,
+    "dev": 20,
+    "test": 40,
+    "paired_families": 15,
+    "paired_dev": 5,
+    "paired_test": 10,
+    "planned_calls": 830,
+    "attempt_cap": 913
+  },
+  "token_caps": {
+    "tested": 512,
+    "judge": 768
+  },
+  "budget": {
+    "planned_h100_card_hours": 32,
+    "max_h100_card_hours": 48,
+    "profile_hours_included": 4,
+    "hkd_per_card_hour": 12
+  },
+  "audit": {
+    "dev": 10,
+    "test": 20,
+    "raters": 2,
+    "test_per_model": {
+      "image_only": 4,
+      "hinted": 3,
+      "ocr_only": 3
+    }
+  },
+  "input_policy": "Task A uses source images and OCR. Task B uses controlled project triples.",
+  "model_revision_status": "The GPU adapters pin all checkpoint revisions. Record the runtime environment during the development pilot."
+}

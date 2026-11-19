@@ -1,0 +1,39 @@
+# Local inputs and experiment outputs
+/data/
+/local/
+/runs/
+/runs.profiles/
+/results/
+/demo/
+/Archive/
+/archives/
+/deliverables/
+/evidence/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.log
+
+# Environments, credentials, and model weights
+.venv*/
+venv/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.DS_Store
+.idea/
+.vscode/

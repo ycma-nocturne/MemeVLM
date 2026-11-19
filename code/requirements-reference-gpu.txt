@@ -1,0 +1,12 @@
+# Install matching CUDA torch and torchvision builds in each environment first.
+# Qwen uses transformers==4.57.1. InternVL uses transformers==4.48.3.
+# Record the installed versions and CUDA details after the dev pilot.
+torch>=2.2
+torchvision
+Pillow
+accelerate
+timm
+einops
+sentencepiece
+safetensors
+huggingface-hub

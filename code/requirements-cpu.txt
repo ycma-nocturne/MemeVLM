@@ -1,0 +1,2 @@
+# Image decoding for Python 3.12.
+Pillow==13.0.0
