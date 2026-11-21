@@ -1,0 +1,8 @@
+{
+  "metric": "loss on the same 33 validation answers, weighted by supervised tokens",
+  "selection": "Lowest validation loss among completed epochs; ties favor the earlier epoch.",
+  "epoch_02": {"seed": 6001, "learning_rate": 0.00003, "train_rows": 98},
+  "epoch_03": {"seed": 6002, "learning_rate": 0.000015, "train_rows": 98, "run_if_epoch_02_loss_reduction_at_least": 0.02},
+  "optimizer": "Fresh AdamW state per continuation. Saved adapters supply the prior parameters.",
+  "evaluation_access": "Official held-out answers are independent of checkpoint selection."
+}

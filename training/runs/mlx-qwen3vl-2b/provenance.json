@@ -1,0 +1,10 @@
+{
+  "model": "https://huggingface.co/mlx-community/Qwen3-VL-2B-Instruct-4bit/commit/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+  "transport": "pinned public mirror, verified against upstream",
+  "model_sha256": "4750d95a2162829e127a94e83ac350d498d02070aab216c4687da48804a06ffb",
+  "data": {
+    "train.jsonl": "c28e072fbad137b415b39a80aa4132b41183e36bc1d07f59dc65421100c3a656",
+    "validation.jsonl": "f523fd6273ce75b9e94922889931c27fe4b1b5bd79e352847310021ba3cf4811"
+  },
+  "image_processing": "Aspect-preserving resize for images over 262,144 pixels; data/images-receipt.json."
+}

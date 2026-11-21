@@ -1,10 +1,10 @@
 # Reproduce the study
 
-Run the commands from `code/` after completing the [CPU setup](../README.md#quick-start).
+Run the commands from `code/` after completing [setup](../README.md#set-up).
 
 ## 1. Verify the inputs
 
-Use the current team input snapshot with the layout below. `MEMEVLM_STUDY_ROOT` can point to its project directory. The commands default to the root of this checkout.
+Use the private input snapshot with the layout below. Set `MEMEVLM_STUDY_ROOT` to its project directory when working from a separate code checkout.
 
 | Path under the study root | Contents |
 | --- | --- |
@@ -30,9 +30,6 @@ python -m meme_study.reference_cli prepare \
   --data-root "$assets" --output "$prepared"
 
 python -m meme_study.reference_cli inspect --prepared "$prepared" --data-root "$assets"
-
-MEMEVLM_STUDY_ROOT="$study_root" python -m unittest discover -s tests \
-  -p test_reference_study_inputs.py
 ```
 
 `prepare` requires a new output directory. Use `inspect` on subsequent checks. The current input snapshot yields 105 image checks, 830 planned calls, an attempt cap of 913, and `prepared_sha256` equal to `e50d1e56349da4021dee6e88b82d38e7bb5d7194ac397c4b5be2f9d44846a4f5`.
