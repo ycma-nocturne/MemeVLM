@@ -17,7 +17,7 @@ from materials import MAX_TOKENS, SEED
 
 MODEL_ID = 'Qwen/Qwen3-VL-4B-Instruct'
 MODEL_REVISION = OFFICIAL_CHECKPOINTS[MODEL_ID]
-VERSIONS = {'torch': '2.9.1+cu128', 'torchvision': '0.24.1+cu128',
+VERSIONS = {'torch': '2.8.0+cu128', 'torchvision': '0.23.0+cu128',
             'transformers': '4.57.1', 'peft': '0.18.1', 'Pillow': '11.3.0',
             'accelerate': '1.11.0', 'huggingface-hub': '0.36.0'}
 CUBLAS_CONFIG = ':4096:8'
@@ -26,6 +26,7 @@ POLICY = {'model_id': MODEL_ID, 'model_revision': MODEL_REVISION,
           'cublas_workspace_config': CUBLAS_CONFIG, 'deterministic_algorithms': True,
           'image_pixels': {'shortest_edge': 262144, 'longest_edge': 1310720},
           'max_new_tokens': MAX_TOKENS, 'generation': _GENERATION, 'versions': VERSIONS,
+          'use_model_defaults': False,
           'trust_remote_code': False, 'batch_size': 1, 'adapter_autocast_dtype': True}
 
 
@@ -100,7 +101,10 @@ class CudaBackend:
         if inputs.input_ids.ndim != 2 or inputs.input_ids.shape[0] != 1:
             raise ValueError('evaluation requires one case per generation')
         with self.torch.inference_mode():
-            output = self.model.generate(**inputs, generation_config=self.generation, max_new_tokens=MAX_TOKENS)
+            output = self.model.generate(
+                **inputs, generation_config=self.generation, max_new_tokens=MAX_TOKENS,
+                use_model_defaults=POLICY['use_model_defaults'],
+            )
         prompt_ids = inputs.input_ids.tolist()[0]
         rows = output.tolist()
         if len(rows) != 1 or rows[0][:len(prompt_ids)] != prompt_ids:

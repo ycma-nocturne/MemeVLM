@@ -20,7 +20,7 @@ Use Linux x86-64, Python 3.12, and one visible NVIDIA GPU with native BF16 and a
 ```bash
 python3.12 -m venv .venv-cuda
 source .venv-cuda/bin/activate
-python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 \
+python -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 \
   --index-url https://download.pytorch.org/whl/cu128
 python -m pip install -r training/gpu/requirements.txt
 hf download Qwen/Qwen3-VL-4B-Instruct --revision ebb281ec70b05090aa6165b016eac8ec08e71b17 \

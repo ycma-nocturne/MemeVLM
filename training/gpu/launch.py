@@ -37,7 +37,7 @@ MODEL_FILES = {
     "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
     "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
 }
-PYTORCH = {"torch": "2.9.1+cu128", "torchvision": "0.24.1+cu128", "torchaudio": "2.9.1+cu128"}
+PYTORCH = {"torch": "2.8.0+cu128", "torchvision": "0.23.0+cu128", "torchaudio": "2.8.0+cu128"}
 RECIPE = HERE / "qwen3vl_4b_lora.json"
 ADAPTER = "adapter_model.safetensors"
 ADAPTER_CONFIG = "adapter_config.json"
