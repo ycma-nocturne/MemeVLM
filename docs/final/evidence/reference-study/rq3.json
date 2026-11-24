@@ -1,0 +1,846 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 6000,
+    "unit": "family"
+  },
+  "definitions": {
+    "cue_correct": "Cue judgment matches an accepted label.",
+    "denominator": "Scorable responses include protocol invalid/truncated answers as zero. Missing, pending, failed, or interrupted executions are unavailable. A complete triple requires three scorable responses.",
+    "joint_correct": "Both cue and relation are correct in the same response.",
+    "permutation": "Semantic relation agreement uses pairs of valid original and repeat answers, regardless of correctness.",
+    "relation_correct": "Selected relation matches an accepted semantic ID.",
+    "strict_pass": "All three responses are jointly correct and the original/sham semantic relation agrees."
+  },
+  "planned_rq3_rows": 110,
+  "protocol_id": "reference_reuse_v1",
+  "scorable_rq3_rows": 110,
+  "score_bundle_complete": false,
+  "splits": {
+    "dev": {
+      "Qwen/Qwen3-VL-4B-Instruct": {
+        "paired_joint_differences": {
+          "edited_minus_original": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "denominator": 5,
+            "estimate": 0.0,
+            "n_expected": 5,
+            "n_unavailable": 0
+          },
+          "sham_minus_original": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "denominator": 5,
+            "estimate": 0.0,
+            "n_expected": 5,
+            "n_unavailable": 0
+          }
+        },
+        "permutation": null,
+        "triples": {
+          "n_complete": 5,
+          "n_expected": 5,
+          "n_incomplete": 0,
+          "sham_preservation": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "denominator": 5,
+            "estimate": 1.0,
+            "n_expected": 5,
+            "n_unavailable": 0,
+            "numerator": 5
+          },
+          "strict_pass": {
+            "ci95": [
+              0.0,
+              0.8
+            ],
+            "denominator": 5,
+            "estimate": 0.4,
+            "n_expected": 5,
+            "n_unavailable": 0,
+            "numerator": 2
+          }
+        },
+        "variants": {
+          "edited": {
+            "cue_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "joint_correct": {
+              "ci95": [
+                0.0,
+                0.8
+              ],
+              "denominator": 5,
+              "estimate": 0.4,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 2
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          },
+          "original": {
+            "cue_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "joint_correct": {
+              "ci95": [
+                0.0,
+                0.8
+              ],
+              "denominator": 5,
+              "estimate": 0.4,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 2
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          },
+          "sham": {
+            "cue_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "joint_correct": {
+              "ci95": [
+                0.0,
+                0.8
+              ],
+              "denominator": 5,
+              "estimate": 0.4,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 2
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          }
+        }
+      },
+      "Qwen/Qwen3-VL-8B-Instruct": {
+        "paired_joint_differences": {
+          "edited_minus_original": {
+            "ci95": [
+              -0.8,
+              0.0
+            ],
+            "denominator": 5,
+            "estimate": -0.4,
+            "n_expected": 5,
+            "n_unavailable": 0
+          },
+          "sham_minus_original": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "denominator": 5,
+            "estimate": 0.0,
+            "n_expected": 5,
+            "n_unavailable": 0
+          }
+        },
+        "permutation": null,
+        "triples": {
+          "n_complete": 5,
+          "n_expected": 5,
+          "n_incomplete": 0,
+          "sham_preservation": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "denominator": 5,
+            "estimate": 1.0,
+            "n_expected": 5,
+            "n_unavailable": 0,
+            "numerator": 5
+          },
+          "strict_pass": {
+            "ci95": [
+              0.0,
+              0.8
+            ],
+            "denominator": 5,
+            "estimate": 0.4,
+            "n_expected": 5,
+            "n_unavailable": 0,
+            "numerator": 2
+          }
+        },
+        "variants": {
+          "edited": {
+            "cue_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "joint_correct": {
+              "ci95": [
+                0.0,
+                0.8
+              ],
+              "denominator": 5,
+              "estimate": 0.4,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 2
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                0.2,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.6,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 3
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          },
+          "original": {
+            "cue_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "joint_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 1.0,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 5
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          },
+          "sham": {
+            "cue_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "joint_correct": {
+              "ci95": [
+                0.4,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 0.8,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 4
+            },
+            "missing_rows": 0,
+            "n_expected": 5,
+            "n_rows": 5,
+            "relation_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 5,
+              "estimate": 1.0,
+              "n_expected": 5,
+              "n_unavailable": 0,
+              "numerator": 5
+            },
+            "run_status": {
+              "ok": 5
+            },
+            "score_status": {
+              "ok": 5
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "Qwen/Qwen3-VL-4B-Instruct": {
+        "paired_joint_differences": {
+          "edited_minus_original": {
+            "ci95": [
+              -0.7,
+              0.1
+            ],
+            "denominator": 10,
+            "estimate": -0.3,
+            "n_expected": 10,
+            "n_unavailable": 0
+          },
+          "sham_minus_original": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "denominator": 10,
+            "estimate": 0.0,
+            "n_expected": 10,
+            "n_unavailable": 0
+          }
+        },
+        "permutation": {
+          "n_complete_response_pairs": 10,
+          "n_incomplete_response_pairs": 0,
+          "n_invalid_response_pairs": 1,
+          "n_valid_response_pairs": 9,
+          "original_coverage": {
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "repeat_coverage": {
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "invalid": 1,
+              "ok": 9
+            }
+          },
+          "semantic_relation_agreement": {
+            "ci95": [
+              0.6666666666666666,
+              1.0
+            ],
+            "denominator": 9,
+            "estimate": 0.8888888888888888,
+            "n_expected": 10,
+            "n_unavailable": 1,
+            "numerator": 8
+          }
+        },
+        "triples": {
+          "n_complete": 10,
+          "n_expected": 10,
+          "n_incomplete": 0,
+          "sham_preservation": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "denominator": 10,
+            "estimate": 1.0,
+            "n_expected": 10,
+            "n_unavailable": 0,
+            "numerator": 10
+          },
+          "strict_pass": {
+            "ci95": [
+              0.2,
+              0.8
+            ],
+            "denominator": 10,
+            "estimate": 0.5,
+            "n_expected": 10,
+            "n_unavailable": 0,
+            "numerator": 5
+          }
+        },
+        "variants": {
+          "edited": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.3,
+                0.9
+              ],
+              "denominator": 10,
+              "estimate": 0.6,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 6
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.3,
+                0.9
+              ],
+              "denominator": 10,
+              "estimate": 0.6,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 6
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "original": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "sham": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          }
+        }
+      },
+      "Qwen/Qwen3-VL-8B-Instruct": {
+        "paired_joint_differences": {
+          "edited_minus_original": {
+            "ci95": [
+              -0.7,
+              0.1
+            ],
+            "denominator": 10,
+            "estimate": -0.3,
+            "n_expected": 10,
+            "n_unavailable": 0
+          },
+          "sham_minus_original": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "denominator": 10,
+            "estimate": 0.0,
+            "n_expected": 10,
+            "n_unavailable": 0
+          }
+        },
+        "permutation": {
+          "n_complete_response_pairs": 10,
+          "n_incomplete_response_pairs": 0,
+          "n_invalid_response_pairs": 0,
+          "n_valid_response_pairs": 10,
+          "original_coverage": {
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "repeat_coverage": {
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "semantic_relation_agreement": {
+            "ci95": [
+              0.7,
+              1.0
+            ],
+            "denominator": 10,
+            "estimate": 0.9,
+            "n_expected": 10,
+            "n_unavailable": 0,
+            "numerator": 9
+          }
+        },
+        "triples": {
+          "n_complete": 10,
+          "n_expected": 10,
+          "n_incomplete": 0,
+          "sham_preservation": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "denominator": 10,
+            "estimate": 1.0,
+            "n_expected": 10,
+            "n_unavailable": 0,
+            "numerator": 10
+          },
+          "strict_pass": {
+            "ci95": [
+              0.2,
+              0.8
+            ],
+            "denominator": 10,
+            "estimate": 0.5,
+            "n_expected": 10,
+            "n_unavailable": 0,
+            "numerator": 5
+          }
+        },
+        "variants": {
+          "edited": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.3,
+                0.9
+              ],
+              "denominator": 10,
+              "estimate": 0.6,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 6
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.3,
+                0.9
+              ],
+              "denominator": 10,
+              "estimate": 0.6,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 6
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "original": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          },
+          "sham": {
+            "cue_correct": {
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 1.0,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 10
+            },
+            "joint_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "missing_rows": 0,
+            "n_expected": 10,
+            "n_rows": 10,
+            "relation_correct": {
+              "ci95": [
+                0.7,
+                1.0
+              ],
+              "denominator": 10,
+              "estimate": 0.9,
+              "n_expected": 10,
+              "n_unavailable": 0,
+              "numerator": 9
+            },
+            "run_status": {
+              "ok": 10
+            },
+            "score_status": {
+              "ok": 10
+            }
+          }
+        }
+      }
+    }
+  }
+}

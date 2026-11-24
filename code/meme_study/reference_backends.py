@@ -165,6 +165,7 @@ class ReferenceQwenBackend(_CudaResourceTelemetry, TransformersBackend):
             'software_versions': _versions(), 'required_transformers': '4.57.1',
             'stage_token_caps': {'explanation': 512, 'pair': 512, 'permutation': 512},
             'frozen_weights': True,
+            'generation_use_model_defaults': False,
             'token_accounting': 'actual input_ids and generated continuation IDs; includes EOS',
         })
 
@@ -195,6 +196,7 @@ class ReferenceQwenBackend(_CudaResourceTelemetry, TransformersBackend):
         generation = self._transformers.GenerationConfig(**copy.deepcopy(_GENERATION))
         with self._torch.inference_mode():
             generated = self._model.generate(**inputs, generation_config=generation,
+                                             use_model_defaults=False,
                                              max_new_tokens=max_new_tokens)
         self._torch.cuda.synchronize(self.device)
         sequence = _single_ids(generated)

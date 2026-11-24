@@ -1,0 +1,67 @@
+% Small vector glyphs for the operations shown in the method figures.
+\newcommand{\opicon}[4]{%
+  \begin{scope}[shift={(#1,#2)},draw=#3,line width=.58pt,line cap=round,line join=round]
+  \csname opglyph#4\endcsname
+  \end{scope}%
+}
+\newcommand{\opglyphgrid}{%
+  \draw[rounded corners=.18mm] (-1.53,-1.53) rectangle (1.53,1.53);
+  \draw (-.51,-1.53) -- (-.51,1.53) (.51,-1.53) -- (.51,1.53)
+        (-1.53,-.51) -- (1.53,-.51) (-1.53,.51) -- (1.53,.51);
+}
+\newcommand{\opglyphtext}{%
+  \draw (-1.27,-1.58) -- (1.27,-1.58) -- (1.27,.62) -- (.3,1.56) -- (-1.27,1.56) -- cycle;
+  \draw (.3,1.49) -- (.3,.62) -- (1.2,.62);
+  \draw (-.73,.12) -- (.71,.12) (-.73,-.45) -- (.71,-.45) (-.73,-1.01) -- (.38,-1.01);
+}
+\newcommand{\opglyphtokens}{%
+  \foreach \x in {-1.7,-.51,.68} {
+    \draw[rounded corners=.19mm] (\x,-.52) rectangle (\x+.98,.52);
+  }
+}
+\newcommand{\opglyphlayers}{%
+  \draw (-1.63,.78) -- (0,1.55) -- (1.63,.78) -- (0,.01) -- cycle;
+  \draw (-1.63,.12) -- (0,-.66) -- (1.63,.12);
+  \draw (-1.63,-.55) -- (0,-1.33) -- (1.63,-.55);
+}
+\newcommand{\opglyphtune}{%
+  \draw (-1.05,-1.4) -- (-1.05,.23) (-1.05,.92) -- (-1.05,1.41)
+        (0,-1.4) -- (0,-.84) (0,-.15) -- (0,1.41)
+        (1.05,-1.4) -- (1.05,.04) (1.05,.73) -- (1.05,1.41);
+  \draw (-1.05,.58) circle (.34mm) (0,-.5) circle (.34mm) (1.05,.38) circle (.34mm);
+}
+\newcommand{\opglyphchat}{%
+  \draw[rounded corners=.2mm] (-1.65,1.16) -- (1.65,1.16) -- (1.65,-.73)
+        -- (-.07,-.73) -- (-.91,-1.43) -- (-.91,-.73) -- (-1.65,-.73) -- cycle;
+  \draw (-1,.2) -- (.94,.2) (-1,-.26) -- (.34,-.26);
+}
+\newcommand{\opglyphloss}{%
+  \draw (-1.47,1.43) -- (-1.47,-1.38) -- (1.48,-1.38);
+  \draw (-1.06,.22) -- (-.45,.22) -- (-.04,.96) -- (.56,-.32) -- (.96,.46) -- (1.49,.46);
+}
+\newcommand{\opglyphrepeat}{%
+  \draw[-{Stealth[length=.76mm,width=.60mm]}]
+        (-1.45,.11) arc[start angle=176,end angle=24,radius=1.49mm];
+  \draw[-{Stealth[length=.76mm,width=.60mm]}]
+        (1.45,-.11) arc[start angle=-4,end angle=-156,radius=1.49mm];
+}
+\newcommand{\opglyphstack}{%
+  \draw[rounded corners=.20mm] (-1.35,-1.46) rectangle (1.06,.78);
+  \draw (-.96,1.2) -- (1.46,1.2) -- (1.46,-1.03);
+  \draw (-.82,.25) -- (.52,.25) (-.82,-.35) -- (.52,-.35) (-.82,-.93) -- (.15,-.93);
+}
+\newcommand{\opglyphcheck}{%
+  \draw[rounded corners=.24mm] (-1.54,-1.37) rectangle (1.54,1.37);
+  \draw (-.91,-.04) -- (-.32,-.57) -- (.88,.63);
+}
+\newcommand{\opglyphchoices}{%
+  \foreach \y in {1.08,0,-1.08}{
+    \draw (-1.22,\y) circle (.29mm) (-.5,\y) -- (1.38,\y);
+  }
+  \draw[line width=1.1pt] (-1.22,0) circle (.06mm);
+}
+\newcommand{\opglyphstats}{%
+  \draw (-1.56,0) -- (1.56,0) (-1.56,-.64) -- (-1.56,.64)
+        (1.56,-.64) -- (1.56,.64);
+  \draw[line width=1.07pt] (0,0) circle (.15mm);
+}

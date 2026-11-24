@@ -1,0 +1,61 @@
+\documentclass{article}
+\input{figure-style}
+\begin{document}
+\noindent\begin{tikzpicture}[canvas]
+\figbounds
+
+% The two colored lanes retain separate inputs and scores around shared inference.
+\card{bluecard}{2}{31.5}{57}{64}
+\fill[blueedge,rounded corners=.45mm] (4,34.5) rectangle (4.9,60.8);
+\node[panelhead,anchor=west] at (7,60.2) {Controlled edits};
+\labelat{note}{44.1}{59.8}{32 test families}
+\foreach \x/\file/\name/\reading in {13.5/original/Original/Clapping,29.5/edited/Target edit/Walking,46.0/sham/Sham/Clapping}{
+  \node[inner sep=0pt] at (\x,50.1)
+    {\includegraphics[width=14.2mm,height=10.9mm,keepaspectratio]{../presentation/assets/watch-\file.png}};
+  \labelat{note}{\x}{42.4}{\name}
+  \labelat{labeltext}{\x}{38.4}{\textbf{\reading}}
+}
+\labelat{note}{29.5}{33.9}{Reference readings}
+
+\card{tealcard}{2}{4}{57}{28.8}
+\fill[tealedge,rounded corners=.45mm] (4,7.5) rectangle (4.9,25.8);
+% Generic picture glyph drawn for the public edition.
+\draw[draw=tealedge,fill=white,rounded corners=.75mm,line width=.5pt]
+  (8,11) rectangle (23.4,23.4);
+\draw[draw=tealedge,line width=.6pt,line join=round]
+  (9.6,13.1) -- (13.9,17.2) -- (16.0,15.1) -- (19.1,18.7) -- (22.0,15.1);
+\fill[tealedge] (19.7,21) circle (.72mm);
+\labelat{note}{15.7}{7.7}{Schematic}
+\labelat{panelhead}{39.4}{23.1}{Natural MemeQA}
+\labelat{labeltext}{39.2}{16.2}{134 images\\816 questions}
+\labelat{note}{39.4}{7.7}{Outside the pilot}
+
+\card{violetcard}{66}{24}{109}{54.7}
+\opicon{87.5}{50.3}{violetedge}{layers}
+\labelat{panelhead}{87.5}{44.4}{Same seven model arms}
+\labelat{labeltext}{87.5}{38.9}{1 frozen base + 6 adapters}
+\draw[draw=violetedge,line width=.38pt] (71.6,35.1) -- (103.4,35.1);
+\labelat{labeltext}{87.5}{29.8}{Fixed prompts\\Greedy decoding}
+
+\card{bluecard}{118}{38.5}{173}{62}
+\opicon{124.6}{56}{blueedge}{check}
+\labelat{panelhead}{148.6}{56}{Strict triple accuracy}
+\labelat{labeltext}{145.5}{48.6}{Exact cue and relation per image}
+\labelat{note}{145.5}{42.7}{All three variants must pass}
+
+\card{tealcard}{118}{5.9}{173}{28.6}
+\opicon{124.6}{22.4}{tealedge}{choices}
+\labelat{panelhead}{148.6}{22.4}{Exact choice accuracy}
+\labelat{labeltext}{145.5}{15.7}{Native A--D answer per question}
+\labelat{note}{145.5}{9.6}{MemeQA reference answers}
+
+\draw[flow,draw=blueedge] (57,47.9) -- (66,47.9);
+\draw[flow,draw=blueedge] (109,47.9) -- (118,47.9);
+\draw[flow,draw=tealedge] (57,17.3) -- (61.5,17.3) -- (61.5,28.8) -- (66,28.8);
+\draw[flow,draw=tealedge] (109,28.8) -- (113.5,28.8) -- (113.5,17.3) -- (118,17.3);
+\opicon{67.2}{14.7}{ochreedge}{stats}
+\labelat{labeltext}{87.5}{14.7}{\textbf{Paired 95\% intervals}}
+\labelat{note}{87.5}{8.35}{10,000 draws by family or image}
+
+\end{tikzpicture}
+\end{document}

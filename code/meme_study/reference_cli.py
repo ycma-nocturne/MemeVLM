@@ -217,6 +217,8 @@ def main(argv=None):
     for name in ('prepared','runs','output'):
         command.add_argument('--'+name, required=True, type=Path)
     command.add_argument('--allow-partial', action='store_true')
+    command.add_argument('--allow-judge-json-fence', action='store_true',
+                         help='Accept a single fenced JSON block around the judge response')
     command = commands.add_parser('analyze', help='Family-paired statistics from a verified score bundle')
     for name in ('scores','output'):
         command.add_argument('--'+name, required=True, type=Path)
@@ -280,7 +282,8 @@ def main(argv=None):
                     runs=args.runs, model=args.model, task=args.task, split=args.split, device=args.device, max_jobs=args.max_jobs, **options)
             elif args.command == 'score':
                 result = score_reference(prepared=args.prepared, runs=args.runs, output=args.output,
-                                         allow_partial=args.allow_partial)
+                                         allow_partial=args.allow_partial,
+                                         allow_judge_json_fence=args.allow_judge_json_fence)
             elif args.command == 'analyze':
                 from .reference_analysis import analyze_reference_scores
                 report = analyze_reference_scores(load_scores(args.scores), seed=args.seed, draws=args.draws)

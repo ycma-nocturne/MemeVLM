@@ -1,0 +1,26 @@
+{
+  "cohort": "native_memeqa.unseen_pilot_images",
+  "corrected": "bilingual correct; replay incorrect",
+  "images": 134,
+  "matched_comparator": "same-seed Chinese replay",
+  "questions": 816,
+  "regressed": "bilingual incorrect; replay correct",
+  "score": "exact single A-D choice",
+  "transitions": [
+    {
+      "corrected": 46,
+      "regressed": 44,
+      "seed": 42
+    },
+    {
+      "corrected": 54,
+      "regressed": 42,
+      "seed": 43
+    },
+    {
+      "corrected": 47,
+      "regressed": 39,
+      "seed": 44
+    }
+  ]
+}

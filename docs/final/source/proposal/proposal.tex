@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[final]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\hypersetup{pdftitle={Does AI Get the Punchline? Evidence and Knowledge in Chinese Meme Understanding}}
+\title{Does AI Get the Punchline?\\
+Evidence and Knowledge in Chinese Meme Understanding}
+\author{MemeVLM Project Team}
+\begin{document}
+\raggedbottom
+\maketitle
+\begin{abstract}
+Vision-language models may recognize a meme's characters without explaining its joke. We study how visual clues and background knowledge support Chinese meme interpretation. Public reference explanations and checklists support automatic evaluation; a small set of controlled visual edits tests whether answers follow changed evidence. The project combines reference reuse, AI-assisted material checks, and paired diagnostics, with limited human review of generated explanations to assess scoring reliability.
+\end{abstract}
+
+\section{Motivation and research questions}
+The Zhuge Liang/Oscar meme frames mourning as award-worthy acting. Naming the character and trophy leaves that relation unexplained. LLaVA includes meme interpretation \citep{liu2023llava}; ColorBench and Tunnel Vision motivate separating perception from reasoning \citep{liang2025color,berman2025tunnel}.
+
+FigMemes studies figurative categories \citep{liu2022figmemes}; MemeCap separates literal descriptions from meme meanings \citep{hwang2023memecap}. \citet{zhou2026came} show that correct labels can accompany unfaithful explanations. MemeBench provides visual, identity, knowledge, and reasoning (V/I/K/R) references \citep{wang2026meme}; MemeReaCon examines communicative context \citep{zhao2025context}. We reuse public annotations in a course reproduction and extension, without claiming a new benchmark or algorithm.
+
+\noindent\textbf{RQ1:} Which reference content can models recover from full images versus captions alone? \textbf{RQ2:} Does factual background improve the explanation of a joke's relation, or mainly its factual detail? \textbf{RQ3:} Do answers follow meaningful visual changes while remaining stable under irrelevant edits? Mechanisms such as irony and contrast organize case analysis; we evaluate observable responses, not internal computation or subjective funniness.
+
+\section{Public references and controlled materials}
+We sample 60 Chinese MemeBench families (20 development, 40 test), retaining its reference explanations, V/I/K/R checklists, OCR, factual knowledge, and domain/mechanism descriptions. Material records distinguish benchmark annotations from adaptations and new project annotations. Shared templates and near-duplicates remain in one split. We fix prompts and conditions using development data. Pretraining exposure is unknown.
+
+Each original has three conditions: image alone, image with a factual hint, and source OCR text alone without a hint. Hints draw on the source knowledge field, excluding ready-made interpretations and facts that directly state the target relation. This is reference-assisted knowledge, not retrieval. The source explanation and reasoning checklist are withheld from tested models. Caption-only reference coverage measures recoverable content; missing visual content is not automatically an interpretation error.
+
+Fifteen families (5 development, 10 test) additionally receive a target-changing edit and a meaning-preserving sham. Text and pixel checks document edit scope. AI-assisted reviews from GPT-6.1 Terra assess the originals, triples, and proposed answers. Material records capture sources, corrections, and unresolved questions. The target edit changes the visual evidence for the original interpretation. The sham preserves that evidence. The edit test uses a variant-specific cue and relation key.
+
+\section{Inference and automatic diagnosis}
+Frozen Qwen3-VL-4B-Instruct and 8B-Instruct \citep{bai2025qwen3vl} use fixed checkpoints, preprocessing, Chinese prompts, and decoding. Each response uses one direct call, capped at 512 tokens; no training or iterative revision is required.
+
+\paragraph{Reference coverage.}
+The 60 originals yield $60\times3\times2=360$ explanations. A separate frozen InternVL3-9B judge \citep{opengvlab2025internvl3} receives the original image, public reference/checklist, and anonymized candidate. One call scores all checklist items and quotes supporting candidate text. Scripts check that quoted spans exist; this does not establish semantic validity. Invalid judge records are unavailable, not model errors; valid-score coverage and failures are reported without selective reruns. We report per-dimension item coverage and paired condition differences, not official MemeBench scores or complete understanding. Knowledge and reasoning gains are analyzed separately.
+
+Two members check 30 sampled explanations: 10 development outputs calibrate the judge prompt; 20 test outputs assess the frozen judge (60 initial ratings). Per model, the test audit samples four image-only, three hinted, and three caption-only outputs. Raters check coarse V/I/K/R coverage and grounding, recording disagreements. This small audit cannot establish general judge reliability. If agreement is poor, coverage results remain descriptive and the exact-scored paired study supports the main diagnosis.
+
+\paragraph{Paired diagnostic.}
+The 15 triples use no hints and a separate structured prompt: a cue question (yes/no/insufficient evidence), a four-choice relation question including insufficient evidence, and a brief explanation. Acceptable semantic answer sets are fixed per variant. This adds $15\times3\times2=90$ calls, including separately prompted originals. Scripts score answers and report invalid or truncated outputs as errors. Joint success requires correct cue and relation answers for all three variants and preservation of the original relation under the sham; an answer flip alone is insufficient. Ten test originals receive one option-order repeat per model (20 calls). Family-cluster bootstrap intervals accompany paired differences. With ten test triples, conclusions are exploratory; mechanism groups support examples, not fine-grained rankings.
+
+\section{Feasibility and expected outputs}
+The plan comprises 360 explanation, 360 judge (768-token cap), 90 paired, and 20 permutation calls. The 830 planned calls allow 913 attempts with a 10\% reserve. Each returned output is scored under the fixed rules. Development runs profile inference throughput and memory. Models load sequentially.
+
+Project work covers batch inference, visual edits and consistency checks, reference and judge integration, exact scoring, paired statistics, and demonstrations.
+
+Deliverables link source-attributed materials, reproducible code, and observed outputs. Demonstrations examine whether factual detail improves without explaining the joke, and whether interpretations persist after their visual support changes. Conclusions depend on measured results.
+\clearpage
+\bibliography{references}
+\end{document}

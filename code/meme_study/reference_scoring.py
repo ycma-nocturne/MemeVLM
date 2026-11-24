@@ -85,7 +85,7 @@ def _unavailable(counts, reason, hashes):
 
 
 def score_checklist(candidate_text: str, checklist: list[dict], judge_text: str,
-                    *, truncated=False) -> dict:
+                    *, truncated=False, allow_json_fence=False) -> dict:
     """Validate all judge items atomically, then compute dimension coverage.
 
     Coverage is covered/applicable; uncertain items remain in that denominator
@@ -103,7 +103,13 @@ def score_checklist(candidate_text: str, checklist: list[dict], judge_text: str,
     if truncated:
         return _unavailable(counts, 'judge response was truncated', hashes)
     try:
-        value = _decode(judge_text)
+        payload = judge_text
+        if allow_json_fence and isinstance(judge_text, str):
+            opening, _, remainder = judge_text.strip().partition('\n')
+            enclosed, _, closing = remainder.rpartition('\n')
+            if opening.rstrip('\r') == '```json' and closing == '```':
+                payload = enclosed
+        value = _decode(payload)
         _object(value, {'items'}, 'judge response')
         if not isinstance(value['items'], list):
             raise ValueError('judge items must be a list')

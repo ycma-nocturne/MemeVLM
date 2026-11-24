@@ -1,0 +1,1733 @@
+{
+  "rating_source": "two returned teammate sheets, retrospective",
+  "answer_counts_per_reviewer": {
+    "explanations": 360,
+    "choices": 45,
+    "materials": 75
+  },
+  "raw_form_comparison": {
+    "agreement": [
+      {
+        "packet": "choices",
+        "phase": "all",
+        "field": "cue",
+        "compared": 45,
+        "agree": 44
+      },
+      {
+        "packet": "choices",
+        "phase": "all",
+        "field": "relation",
+        "compared": 45,
+        "agree": 43
+      },
+      {
+        "packet": "choices",
+        "phase": "independent_choices",
+        "field": "cue",
+        "compared": 45,
+        "agree": 44
+      },
+      {
+        "packet": "choices",
+        "phase": "independent_choices",
+        "field": "relation",
+        "compared": 45,
+        "agree": 43
+      },
+      {
+        "packet": "explanations",
+        "phase": "all",
+        "field": "check_item",
+        "compared": 4386,
+        "agree": 4354
+      },
+      {
+        "packet": "explanations",
+        "phase": "all",
+        "field": "grounded_relation",
+        "compared": 360,
+        "agree": 354
+      },
+      {
+        "packet": "explanations",
+        "phase": "all",
+        "field": "invented_claim",
+        "compared": 360,
+        "agree": 353
+      },
+      {
+        "packet": "explanations",
+        "phase": "dev",
+        "field": "check_item",
+        "compared": 1434,
+        "agree": 1425
+      },
+      {
+        "packet": "explanations",
+        "phase": "dev",
+        "field": "grounded_relation",
+        "compared": 120,
+        "agree": 119
+      },
+      {
+        "packet": "explanations",
+        "phase": "dev",
+        "field": "invented_claim",
+        "compared": 120,
+        "agree": 117
+      },
+      {
+        "packet": "explanations",
+        "phase": "test",
+        "field": "check_item",
+        "compared": 2952,
+        "agree": 2929
+      },
+      {
+        "packet": "explanations",
+        "phase": "test",
+        "field": "grounded_relation",
+        "compared": 240,
+        "agree": 235
+      },
+      {
+        "packet": "explanations",
+        "phase": "test",
+        "field": "invented_claim",
+        "compared": 240,
+        "agree": 236
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "check_item",
+        "compared": 731,
+        "agree": 723
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "hint_fit",
+        "compared": 60,
+        "agree": 59
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "hint_leakage",
+        "compared": 60,
+        "agree": 58
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "reference_fit",
+        "compared": 60,
+        "agree": 60
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "sham_cue_preserved",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "sham_relation_preserved",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "target_cue_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "target_relation_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "transcript_fit",
+        "compared": 60,
+        "agree": 60
+      },
+      {
+        "packet": "materials",
+        "phase": "all",
+        "field": "unintended_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "intervention_review",
+        "field": "sham_cue_preserved",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "intervention_review",
+        "field": "sham_relation_preserved",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "intervention_review",
+        "field": "target_cue_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "intervention_review",
+        "field": "target_relation_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "intervention_review",
+        "field": "unintended_change",
+        "compared": 15,
+        "agree": 15
+      },
+      {
+        "packet": "materials",
+        "phase": "source_alignment",
+        "field": "check_item",
+        "compared": 731,
+        "agree": 723
+      },
+      {
+        "packet": "materials",
+        "phase": "source_alignment",
+        "field": "hint_fit",
+        "compared": 60,
+        "agree": 59
+      },
+      {
+        "packet": "materials",
+        "phase": "source_alignment",
+        "field": "hint_leakage",
+        "compared": 60,
+        "agree": 58
+      },
+      {
+        "packet": "materials",
+        "phase": "source_alignment",
+        "field": "reference_fit",
+        "compared": 60,
+        "agree": 60
+      },
+      {
+        "packet": "materials",
+        "phase": "source_alignment",
+        "field": "transcript_fit",
+        "compared": 60,
+        "agree": 60
+      }
+    ],
+    "disagreements": {
+      "explanations": 45,
+      "choices": 3,
+      "materials": 11
+    }
+  },
+  "judge_comparison": {
+    "proposal_dev": {
+      "expected_answers": 10,
+      "masked_answers": 3,
+      "jointly_valid_answers": 1,
+      "jointly_valid_identical_answers": 1,
+      "frozen": {
+        "valid_answers": 1,
+        "compared_items": 11,
+        "matching_items": {
+          "R1": 1,
+          "R2": 1
+        }
+      },
+      "replay": {
+        "valid_answers": 1,
+        "compared_items": 11,
+        "matching_items": {
+          "R1": 1,
+          "R2": 1
+        }
+      },
+      "shared": {
+        "valid_answers": 1,
+        "compared_items": 11,
+        "matching_items": {
+          "R1": 1,
+          "R2": 1
+        }
+      }
+    },
+    "proposal_test": {
+      "expected_answers": 20,
+      "masked_answers": 6,
+      "jointly_valid_answers": 11,
+      "jointly_valid_identical_answers": 11,
+      "frozen": {
+        "valid_answers": 11,
+        "compared_items": 138,
+        "matching_items": {
+          "R1": 92,
+          "R2": 91
+        }
+      },
+      "replay": {
+        "valid_answers": 17,
+        "compared_items": 208,
+        "matching_items": {
+          "R1": 133,
+          "R2": 132
+        }
+      },
+      "shared": {
+        "valid_answers": 11,
+        "compared_items": 138,
+        "matching_items": {
+          "R1": 92,
+          "R2": 91
+        }
+      }
+    },
+    "all_dev": {
+      "expected_answers": 120,
+      "masked_answers": 41,
+      "jointly_valid_answers": 8,
+      "jointly_valid_identical_answers": 8,
+      "frozen": {
+        "valid_answers": 8,
+        "compared_items": 98,
+        "matching_items": {
+          "R1": 47,
+          "R2": 47
+        }
+      },
+      "replay": {
+        "valid_answers": 8,
+        "compared_items": 98,
+        "matching_items": {
+          "R1": 47,
+          "R2": 47
+        }
+      },
+      "shared": {
+        "valid_answers": 8,
+        "compared_items": 98,
+        "matching_items": {
+          "R1": 47,
+          "R2": 47
+        }
+      }
+    },
+    "all_test": {
+      "expected_answers": 240,
+      "masked_answers": 80,
+      "jointly_valid_answers": 91,
+      "jointly_valid_identical_answers": 91,
+      "frozen": {
+        "valid_answers": 91,
+        "compared_items": 1110,
+        "matching_items": {
+          "R1": 560,
+          "R2": 560
+        }
+      },
+      "replay": {
+        "valid_answers": 188,
+        "compared_items": 2297,
+        "matching_items": {
+          "R1": 1441,
+          "R2": 1440
+        }
+      },
+      "shared": {
+        "valid_answers": 91,
+        "compared_items": 1110,
+        "matching_items": {
+          "R1": 560,
+          "R2": 560
+        }
+      }
+    },
+    "all_test_unmasked": {
+      "expected_answers": 160,
+      "masked_answers": 0,
+      "jointly_valid_answers": 27,
+      "jointly_valid_identical_answers": 27,
+      "frozen": {
+        "valid_answers": 27,
+        "compared_items": 329,
+        "matching_items": {
+          "R1": 242,
+          "R2": 242
+        }
+      },
+      "replay": {
+        "valid_answers": 116,
+        "compared_items": 1418,
+        "matching_items": {
+          "R1": 1079,
+          "R2": 1078
+        }
+      },
+      "shared": {
+        "valid_answers": 27,
+        "compared_items": 329,
+        "matching_items": {
+          "R1": 242,
+          "R2": 242
+        }
+      }
+    }
+  },
+  "analysis": {
+    "hint_flags": {
+      "all_families": 60,
+      "agreed_direct_leakage": 14,
+      "either_direct_leakage": 16,
+      "test_agreed_direct_leakage": 12,
+      "test_either_direct_leakage": 13,
+      "test_total": 40
+    },
+    "raw_human_effects": {
+      "RQ1/ocr_available": {
+        "R1": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.5452380952380952,
+              "ci": [
+                0.4119047619047619,
+                0.6690476190476191
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.5809523809523809,
+              "ci": [
+                0.40476190476190477,
+                0.7428571428571429
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.5333333333333333,
+              "ci": [
+                0.3547619047619047,
+                0.7023809523809524
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.5714285714285714,
+              "ci": [
+                0.4095238095238095,
+                0.7285714285714285
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.6452380952380952,
+              "ci": [
+                0.5357142857142857,
+                0.7452380952380953
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.6285714285714286,
+              "ci": [
+                0.42857142857142855,
+                0.8142857142857143
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.6714285714285714,
+              "ci": [
+                0.5142857142857142,
+                0.8214285714285714
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.7666666666666666,
+              "ci": [
+                0.6333333333333333,
+                0.8904761904761905
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        },
+        "R2": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.5452380952380952,
+              "ci": [
+                0.4119047619047619,
+                0.6690476190476191
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.5809523809523809,
+              "ci": [
+                0.40476190476190477,
+                0.7428571428571429
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.5333333333333333,
+              "ci": [
+                0.3547619047619047,
+                0.7023809523809524
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.5714285714285714,
+              "ci": [
+                0.4095238095238095,
+                0.7285714285714285
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.6452380952380952,
+              "ci": [
+                0.5309523809523811,
+                0.75
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.5928571428571429,
+              "ci": [
+                0.39285714285714285,
+                0.7714285714285715
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.6357142857142857,
+              "ci": [
+                0.4714285714285714,
+                0.7928571428571428
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.7761904761904762,
+              "ci": [
+                0.6476190476190476,
+                0.8952380952380953
+              ],
+              "n_clusters": 35,
+              "n_pairs": 35,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        }
+      },
+      "RQ2/all": {
+        "R1": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.11666666666666667,
+              "ci": [
+                0.004166666666666666,
+                0.2375
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.225,
+              "ci": [
+                0.07083333333333333,
+                0.37916666666666665
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.26041666666666663,
+              "ci": [
+                0.10416666666666666,
+                0.41875
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.29583333333333334,
+              "ci": [
+                0.15833333333333333,
+                0.4375
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": 0.035416666666666666,
+              "ci": [
+                -0.04791666666666667,
+                0.11875
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.04375,
+              "ci": [
+                -0.03125,
+                0.13125
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.15,
+              "ci": [
+                0.0375,
+                0.275
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.12916666666666668,
+              "ci": [
+                0.008229166666666754,
+                0.25416666666666665
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.1125,
+              "ci": [
+                0.020833333333333332,
+                0.2166666666666667
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": -0.016666666666666666,
+              "ci": [
+                -0.09583333333333333,
+                0.05833333333333333
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        },
+        "R2": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.10416666666666667,
+              "ci": [
+                -0.008333333333333337,
+                0.225
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.2125,
+              "ci": [
+                0.0625,
+                0.3625
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.24166666666666664,
+              "ci": [
+                0.0875,
+                0.4
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.27083333333333337,
+              "ci": [
+                0.14166666666666666,
+                0.4041666666666667
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": 0.029166666666666667,
+              "ci": [
+                -0.05208333333333333,
+                0.10625
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.04375,
+              "ci": [
+                -0.03125,
+                0.13125
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.18125,
+              "ci": [
+                0.075,
+                0.3
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.16041666666666668,
+              "ci": [
+                0.035416666666666666,
+                0.2875
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.12083333333333332,
+              "ci": [
+                0.029166666666666664,
+                0.225
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": -0.03958333333333333,
+              "ci": [
+                -0.12916666666666665,
+                0.04583333333333332
+              ],
+              "n_clusters": 40,
+              "n_pairs": 40,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        }
+      },
+      "RQ2/exclude_either_direct_hint_flag": {
+        "R1": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.08024691358024691,
+              "ci": [
+                -0.0308641975308642,
+                0.21296296296296297
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.09259259259259259,
+              "ci": [
+                -0.043209876543209874,
+                0.2345679012345679
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.09259259259259259,
+              "ci": [
+                -0.07407407407407407,
+                0.26851851851851855
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.16049382716049382,
+              "ci": [
+                0.01851851851851851,
+                0.3148148148148148
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": 0.06790123456790123,
+              "ci": [
+                -0.021682098765432034,
+                0.1728395061728395
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.06481481481481481,
+              "ci": [
+                0.0,
+                0.1574074074074074
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.07407407407407407,
+              "ci": [
+                -0.018518518518518517,
+                0.2037037037037037
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.05555555555555555,
+              "ci": [
+                -0.07407407407407407,
+                0.2037037037037037
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.04320987654320988,
+              "ci": [
+                -0.037037037037037035,
+                0.14197530864197533
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": -0.012345679012345677,
+              "ci": [
+                -0.12345679012345678,
+                0.09876543209876544
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        },
+        "R2": {
+          "Qwen3-VL-4B-Instruct": {
+            "V": {
+              "estimate": 0.08024691358024691,
+              "ci": [
+                -0.0308641975308642,
+                0.21296296296296297
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.09259259259259259,
+              "ci": [
+                -0.043209876543209874,
+                0.2345679012345679
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.08333333333333333,
+              "ci": [
+                -0.08333333333333333,
+                0.25925925925925924
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.1419753086419753,
+              "ci": [
+                0.012345679012345668,
+                0.29012345679012347
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": 0.05864197530864197,
+              "ci": [
+                -0.02469135802469136,
+                0.15432098765432098
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          },
+          "Qwen3-VL-8B-Instruct": {
+            "V": {
+              "estimate": 0.06481481481481481,
+              "ci": [
+                0.0,
+                0.1574074074074074
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "I": {
+              "estimate": 0.12037037037037036,
+              "ci": [
+                0.009259259259259259,
+                0.25
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "K": {
+              "estimate": 0.10185185185185185,
+              "ci": [
+                -0.046296296296296294,
+                0.26851851851851855
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R": {
+              "estimate": 0.05555555555555555,
+              "ci": [
+                -0.030864197530864196,
+                0.16049382716049385
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            },
+            "R_minus_K": {
+              "estimate": -0.046296296296296294,
+              "ci": [
+                -0.16975308641975306,
+                0.0771604938271605
+              ],
+              "n_clusters": 27,
+              "n_pairs": 27,
+              "seed": 6000,
+              "repeats": 10000
+            }
+          }
+        }
+      }
+    },
+    "ai_assisted_coverage_sensitivity": {
+      "test_item_rows_overlay": 62,
+      "effects": {
+        "RQ1/ocr_available": {
+          "R1": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.5452380952380952,
+                "ci": [
+                  0.4119047619047619,
+                  0.6690476190476191
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.5809523809523809,
+                "ci": [
+                  0.40476190476190477,
+                  0.7428571428571429
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.5333333333333333,
+                "ci": [
+                  0.3547619047619047,
+                  0.7023809523809524
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.5714285714285714,
+                "ci": [
+                  0.4095238095238095,
+                  0.7285714285714285
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.6452380952380952,
+                "ci": [
+                  0.5357142857142857,
+                  0.7452380952380953
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.6285714285714286,
+                "ci": [
+                  0.42857142857142855,
+                  0.8142857142857143
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.6714285714285714,
+                "ci": [
+                  0.5142857142857142,
+                  0.8214285714285714
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.7666666666666666,
+                "ci": [
+                  0.6333333333333333,
+                  0.8904761904761905
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          },
+          "R2": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.5452380952380952,
+                "ci": [
+                  0.4119047619047619,
+                  0.6690476190476191
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.5809523809523809,
+                "ci": [
+                  0.40476190476190477,
+                  0.7428571428571429
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.5333333333333333,
+                "ci": [
+                  0.3547619047619047,
+                  0.7023809523809524
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.5714285714285714,
+                "ci": [
+                  0.4095238095238095,
+                  0.7285714285714285
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.6452380952380952,
+                "ci": [
+                  0.5309523809523811,
+                  0.75
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.5928571428571429,
+                "ci": [
+                  0.39285714285714285,
+                  0.7714285714285715
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.6357142857142857,
+                "ci": [
+                  0.4714285714285714,
+                  0.7928571428571428
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.7761904761904762,
+                "ci": [
+                  0.6476190476190476,
+                  0.8952380952380953
+                ],
+                "n_clusters": 35,
+                "n_pairs": 35,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          }
+        },
+        "RQ2/all": {
+          "R1": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.11041666666666668,
+                "ci": [
+                  0.0,
+                  0.22505208333333257
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.21666666666666665,
+                "ci": [
+                  0.0625,
+                  0.37083333333333335
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.23541666666666666,
+                "ci": [
+                  0.08541666666666667,
+                  0.3895833333333333
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.29583333333333334,
+                "ci": [
+                  0.15833333333333333,
+                  0.4375
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.06041666666666666,
+                "ci": [
+                  -0.03333333333333333,
+                  0.15416666666666667
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.0375,
+                "ci": [
+                  -0.0375,
+                  0.125
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.14166666666666666,
+                "ci": [
+                  0.0375,
+                  0.2541666666666667
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.11041666666666668,
+                "ci": [
+                  -0.00625,
+                  0.22708333333333336
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.1125,
+                "ci": [
+                  0.020833333333333332,
+                  0.2166666666666667
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.002083333333333334,
+                "ci": [
+                  -0.05208333333333333,
+                  0.06666666666666667
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          },
+          "R2": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.09791666666666667,
+                "ci": [
+                  -0.0125,
+                  0.21666666666666665
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.20416666666666666,
+                "ci": [
+                  0.05416666666666666,
+                  0.35416666666666663
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.21666666666666665,
+                "ci": [
+                  0.06666666666666667,
+                  0.36875
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.27083333333333337,
+                "ci": [
+                  0.14166666666666666,
+                  0.4041666666666667
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.05416666666666666,
+                "ci": [
+                  -0.035416666666666666,
+                  0.14583333333333331
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.0375,
+                "ci": [
+                  -0.0375,
+                  0.125
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.17291666666666666,
+                "ci": [
+                  0.06875,
+                  0.2895833333333333
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.14166666666666666,
+                "ci": [
+                  0.02291666666666666,
+                  0.26041666666666663
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.12083333333333332,
+                "ci": [
+                  0.029166666666666664,
+                  0.225
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": -0.020833333333333332,
+                "ci": [
+                  -0.09166666666666666,
+                  0.05208333333333335
+                ],
+                "n_clusters": 40,
+                "n_pairs": 40,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          }
+        },
+        "RQ2/exclude_either_direct_hint_flag": {
+          "R1": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.07098765432098765,
+                "ci": [
+                  -0.03395061728395062,
+                  0.19753086419753085
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.08024691358024691,
+                "ci": [
+                  -0.05555555555555555,
+                  0.2222222222222222
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.05555555555555555,
+                "ci": [
+                  -0.10185185185185185,
+                  0.2222222222222222
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.16049382716049382,
+                "ci": [
+                  0.01851851851851851,
+                  0.3148148148148148
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.10493827160493827,
+                "ci": [
+                  -0.006172839506172843,
+                  0.23148148148148148
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.05555555555555555,
+                "ci": [
+                  0.0,
+                  0.14814814814814814
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.06172839506172839,
+                "ci": [
+                  -0.024691358024691364,
+                  0.1728395061728395
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.027777777777777776,
+                "ci": [
+                  -0.10185185185185185,
+                  0.16666666666666666
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.04320987654320988,
+                "ci": [
+                  -0.037037037037037035,
+                  0.14197530864197533
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.015432098765432101,
+                "ci": [
+                  -0.04629629629629629,
+                  0.10185185185185185
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          },
+          "R2": {
+            "Qwen3-VL-4B-Instruct": {
+              "V": {
+                "estimate": 0.07098765432098765,
+                "ci": [
+                  -0.03395061728395062,
+                  0.19753086419753085
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.08024691358024691,
+                "ci": [
+                  -0.05555555555555555,
+                  0.2222222222222222
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.046296296296296294,
+                "ci": [
+                  -0.1111111111111111,
+                  0.21296296296296297
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.1419753086419753,
+                "ci": [
+                  0.012345679012345668,
+                  0.29012345679012347
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": 0.09567901234567901,
+                "ci": [
+                  -0.009259259259259259,
+                  0.21604938271604937
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            },
+            "Qwen3-VL-8B-Instruct": {
+              "V": {
+                "estimate": 0.05555555555555555,
+                "ci": [
+                  0.0,
+                  0.14814814814814814
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "I": {
+                "estimate": 0.10802469135802469,
+                "ci": [
+                  0.009259259259259259,
+                  0.2222222222222222
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "K": {
+                "estimate": 0.07407407407407407,
+                "ci": [
+                  -0.06481481481481481,
+                  0.2222222222222222
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R": {
+                "estimate": 0.05555555555555555,
+                "ci": [
+                  -0.030864197530864196,
+                  0.16049382716049385
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              },
+              "R_minus_K": {
+                "estimate": -0.018518518518518514,
+                "ci": [
+                  -0.11419753086419752,
+                  0.08950617283950618
+                ],
+                "n_clusters": 27,
+                "n_pairs": 27,
+                "seed": 6000,
+                "repeats": 10000
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ The experiment compares the pinned Qwen3-VL-4B base with two LoRA profiles acros
 
 ## Stage the workspace
 
-Use the [4B CUDA environment](../README.md), pinned model snapshot, and both private team handoffs. Set REPO to this checkout and WORK to an absolute experiment directory. Put the repository code under WORK/project and the pinned Qwen snapshot under WORK/model. Use the original bilingual export at WORK/inputs/sft-bilingual. Copy the original English paired freeze, receipts, and ledgers to WORK/evaluation. Put the original English image release at WORK/evaluation/english-corpus and the original seed-42 bilingual adapter run at WORK/output/bilingual.
+Use the [4B CUDA environment](../README.md), pinned model snapshot, and both private team handoffs. Set `REPO` to this checkout and `WORK` to an absolute experiment directory outside the checkout. Put the repository code and private project inputs under `WORK/project`. The image overlap check uses `training/images/`, `training/bilingual/images/`, and `data/assets/` within that directory. Put the pinned Qwen snapshot under `WORK/model`. Use the original bilingual export at WORK/inputs/sft-bilingual. Copy the original English paired freeze, receipts, and ledgers to WORK/evaluation. Put the original English image release at WORK/evaluation/english-corpus and the original seed-42 bilingual adapter run at WORK/output/bilingual.
 
 ~~~sh
 exp="$WORK/final-expansion"
@@ -14,10 +14,10 @@ cp "$REPO/training/gpu/eval/memeqa/run_memeqa.py" "$exp/"
 cp "$REPO/training/gpu/eval/memeqa/prepare.py" "$exp/pilot_prepare.py"
 ~~~
 
-Use the expanded handoff's protocol.json in final-expansion/. It binds the input manifests, prompt policy, and scoring code. Rebuild the native inputs from the pinned [MemeQA and SemEval files](../eval/memeqa/README.md). Save the original pilot selection manifest as pilot-manifest.json beside the downloaded archives before running the expanded builder.
+Use the expanded handoff's protocol.json in final-expansion/. It binds the input manifests, prompt policy, and scoring code. Rebuild the native inputs from the pinned [MemeQA and SemEval files](../eval/memeqa/README.md). Set `NATIVE_INPUTS` to the absolute directory holding the downloaded archives and `memeqa-test.json`. Save the original pilot selection manifest there as `pilot-manifest.json`.
 
 ~~~sh
-python "$exp/build_expanded.py" --project "$WORK/project" --output "$exp/native"
+(cd "$NATIVE_INPUTS" && python "$exp/build_expanded.py" --project "$WORK/project" --output "$exp/native")
 python "$WORK/project/training/gpu/prepare_data.py" export --project "$WORK/project" \
   --profile chinese --output "$exp/inputs/chinese-source"
 python "$exp/matched_controls.py" --project "$WORK/project" prepare \

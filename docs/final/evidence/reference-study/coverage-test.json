@@ -1,0 +1,2155 @@
+{
+  "bootstrap_unit": "family_id",
+  "draws": 10000,
+  "input_hashes": {
+    "ledger_sha256": "fdca41e27df1da33d6fcb9b87f374acdb575f323114a84d3ce7245f797b2b5f9"
+  },
+  "primary_split": "test",
+  "protocol_id": "reference_reuse_v1",
+  "schema_version": 1,
+  "seed": 6000,
+  "splits": {
+    "test": {
+      "explanation": {
+        "counts": {
+          "candidate_run_status": {
+            "ok": 240
+          },
+          "candidate_truncated": 98,
+          "judge_run_status": {
+            "ok": 240
+          },
+          "planned_explanations": 240,
+          "score_status": {
+            "ok": 91,
+            "unavailable": 149
+          },
+          "unavailable_reasons": {
+            "checklist_or_schema": 5,
+            "evidence_id": 105,
+            "invalid_json": 27,
+            "truncated": 12
+          }
+        },
+        "models": {
+          "Qwen/Qwen3-VL-4B-Instruct": {
+            "condition_differences": {
+              "hinted_minus_image_only": {
+                "I": {
+                  "ci95": null,
+                  "denominator": 0,
+                  "estimate": null,
+                  "n_clusters": 0,
+                  "n_expected": 40,
+                  "n_unavailable": 40
+                },
+                "K": {
+                  "ci95": null,
+                  "denominator": 0,
+                  "estimate": null,
+                  "n_clusters": 0,
+                  "n_expected": 40,
+                  "n_unavailable": 40
+                },
+                "R": {
+                  "ci95": null,
+                  "denominator": 0,
+                  "estimate": null,
+                  "n_clusters": 0,
+                  "n_expected": 40,
+                  "n_unavailable": 40
+                },
+                "V": {
+                  "ci95": null,
+                  "denominator": 0,
+                  "estimate": null,
+                  "n_clusters": 0,
+                  "n_expected": 40,
+                  "n_unavailable": 40
+                }
+              },
+              "hinted_minus_ocr_only": {
+                "I": {
+                  "ci95": [
+                    1.0,
+                    1.0
+                  ],
+                  "denominator": 2,
+                  "estimate": 1.0,
+                  "n_clusters": 2,
+                  "n_expected": 40,
+                  "n_unavailable": 38
+                },
+                "K": {
+                  "ci95": [
+                    0.0,
+                    1.0
+                  ],
+                  "denominator": 2,
+                  "estimate": 0.5,
+                  "n_clusters": 2,
+                  "n_expected": 40,
+                  "n_unavailable": 38
+                },
+                "R": {
+                  "ci95": [
+                    1.0,
+                    1.0
+                  ],
+                  "denominator": 2,
+                  "estimate": 1.0,
+                  "n_clusters": 2,
+                  "n_expected": 40,
+                  "n_unavailable": 38
+                },
+                "V": {
+                  "ci95": [
+                    0.0,
+                    1.0
+                  ],
+                  "denominator": 2,
+                  "estimate": 0.5,
+                  "n_clusters": 2,
+                  "n_expected": 40,
+                  "n_unavailable": 38
+                }
+              },
+              "image_only_minus_ocr_only": {
+                "I": {
+                  "ci95": [
+                    -0.42857142857142855,
+                    0.42857142857142855
+                  ],
+                  "denominator": 7,
+                  "estimate": 0.0,
+                  "n_clusters": 7,
+                  "n_expected": 40,
+                  "n_unavailable": 33
+                },
+                "K": {
+                  "ci95": [
+                    0.0,
+                    0.14285714285714285
+                  ],
+                  "denominator": 7,
+                  "estimate": 0.047619047619047616,
+                  "n_clusters": 7,
+                  "n_expected": 40,
+                  "n_unavailable": 33
+                },
+                "R": {
+                  "ci95": [
+                    -0.09523809523809523,
+                    0.5714285714285714
+                  ],
+                  "denominator": 7,
+                  "estimate": 0.2380952380952381,
+                  "n_clusters": 7,
+                  "n_expected": 40,
+                  "n_unavailable": 33
+                },
+                "V": {
+                  "ci95": [
+                    -0.10714285714285714,
+                    0.42857142857142855
+                  ],
+                  "denominator": 7,
+                  "estimate": 0.10714285714285714,
+                  "n_clusters": 7,
+                  "n_expected": 40,
+                  "n_unavailable": 33
+                }
+              }
+            },
+            "conditions": {
+              "hinted": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.0,
+                      1.0
+                    ],
+                    "denominator": 3,
+                    "estimate": 0.6666666666666666,
+                    "n_clusters": 3,
+                    "n_expected": 40,
+                    "n_unavailable": 37
+                  },
+                  "K": {
+                    "ci95": [
+                      0.0,
+                      1.0
+                    ],
+                    "denominator": 3,
+                    "estimate": 0.5833333333333334,
+                    "n_clusters": 3,
+                    "n_expected": 40,
+                    "n_unavailable": 37
+                  },
+                  "R": {
+                    "ci95": [
+                      1.0,
+                      1.0
+                    ],
+                    "denominator": 3,
+                    "estimate": 1.0,
+                    "n_clusters": 3,
+                    "n_expected": 40,
+                    "n_unavailable": 37
+                  },
+                  "V": {
+                    "ci95": [
+                      1.0,
+                      1.0
+                    ],
+                    "denominator": 3,
+                    "estimate": 1.0,
+                    "n_clusters": 3,
+                    "n_expected": 40,
+                    "n_unavailable": 37
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.0,
+                    0.175
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.075,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              },
+              "image_only": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.0,
+                      0.625
+                    ],
+                    "denominator": 8,
+                    "estimate": 0.3125,
+                    "n_clusters": 8,
+                    "n_expected": 40,
+                    "n_unavailable": 32
+                  },
+                  "K": {
+                    "ci95": [
+                      0.0,
+                      0.125
+                    ],
+                    "denominator": 8,
+                    "estimate": 0.041666666666666664,
+                    "n_clusters": 8,
+                    "n_expected": 40,
+                    "n_unavailable": 32
+                  },
+                  "R": {
+                    "ci95": [
+                      0.3125,
+                      0.875
+                    ],
+                    "denominator": 8,
+                    "estimate": 0.6041666666666666,
+                    "n_clusters": 8,
+                    "n_expected": 40,
+                    "n_unavailable": 32
+                  },
+                  "V": {
+                    "ci95": [
+                      0.84375,
+                      1.0
+                    ],
+                    "denominator": 8,
+                    "estimate": 0.9375,
+                    "n_clusters": 8,
+                    "n_expected": 40,
+                    "n_unavailable": 32
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.075,
+                    0.325
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.2,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              },
+              "ocr_only": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.2878787878787879,
+                      0.5959595959595959
+                    ],
+                    "denominator": 33,
+                    "estimate": 0.4393939393939394,
+                    "n_clusters": 33,
+                    "n_expected": 40,
+                    "n_unavailable": 7
+                  },
+                  "K": {
+                    "ci95": [
+                      0.06060606060606061,
+                      0.30303030303030304
+                    ],
+                    "denominator": 33,
+                    "estimate": 0.18181818181818182,
+                    "n_clusters": 33,
+                    "n_expected": 40,
+                    "n_unavailable": 7
+                  },
+                  "R": {
+                    "ci95": [
+                      0.3737373737373737,
+                      0.6767676767676767
+                    ],
+                    "denominator": 33,
+                    "estimate": 0.5252525252525252,
+                    "n_clusters": 33,
+                    "n_expected": 40,
+                    "n_unavailable": 7
+                  },
+                  "V": {
+                    "ci95": [
+                      0.7651515151515151,
+                      0.9696969696969697
+                    ],
+                    "denominator": 33,
+                    "estimate": 0.8787878787878788,
+                    "n_clusters": 33,
+                    "n_expected": 40,
+                    "n_unavailable": 7
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.7,
+                    0.925
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.825,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              }
+            },
+            "counts_by_condition": {
+              "hinted": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 2,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 3,
+                  "unavailable": 37
+                },
+                "unavailable_reasons": {
+                  "evidence_id": 31,
+                  "invalid_json": 4,
+                  "truncated": 2
+                }
+              },
+              "image_only": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 5,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 8,
+                  "unavailable": 32
+                },
+                "unavailable_reasons": {
+                  "checklist_or_schema": 1,
+                  "evidence_id": 22,
+                  "invalid_json": 6,
+                  "truncated": 3
+                }
+              },
+              "ocr_only": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 20,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 33,
+                  "unavailable": 7
+                },
+                "unavailable_reasons": {
+                  "checklist_or_schema": 2,
+                  "evidence_id": 3,
+                  "invalid_json": 1,
+                  "truncated": 1
+                }
+              }
+            },
+            "hint_gains": {
+              "K": {
+                "ci95": null,
+                "denominator": 0,
+                "estimate": null,
+                "n_clusters": 0,
+                "n_expected": 40,
+                "n_unavailable": 40
+              },
+              "R": {
+                "ci95": null,
+                "denominator": 0,
+                "estimate": null,
+                "n_clusters": 0,
+                "n_expected": 40,
+                "n_unavailable": 40
+              },
+              "R_minus_K": {
+                "ci95": null,
+                "denominator": 0,
+                "estimate": null,
+                "n_clusters": 0,
+                "n_expected": 40,
+                "n_unavailable": 40
+              }
+            },
+            "ocr_subgroups": {
+              "available": {
+                "condition_differences": {
+                  "hinted_minus_image_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 35,
+                      "n_unavailable": 35
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 35,
+                      "n_unavailable": 35
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 35,
+                      "n_unavailable": 35
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 35,
+                      "n_unavailable": 35
+                    }
+                  },
+                  "hinted_minus_ocr_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 35,
+                      "n_unavailable": 34
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 35,
+                      "n_unavailable": 34
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 35,
+                      "n_unavailable": 34
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 0.0,
+                      "n_clusters": 1,
+                      "n_expected": 35,
+                      "n_unavailable": 34
+                    }
+                  },
+                  "image_only_minus_ocr_only": {
+                    "I": {
+                      "ci95": [
+                        -0.6,
+                        0.0
+                      ],
+                      "denominator": 5,
+                      "estimate": -0.2,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        0.2
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.06666666666666667,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "R": {
+                      "ci95": [
+                        -0.2,
+                        0.6
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.13333333333333336,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "V": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.0,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    }
+                  }
+                },
+                "conditions": {
+                  "hinted": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.5,
+                        "n_clusters": 2,
+                        "n_expected": 35,
+                        "n_unavailable": 33
+                      },
+                      "K": {
+                        "ci95": [
+                          0.75,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.875,
+                        "n_clusters": 2,
+                        "n_expected": 35,
+                        "n_unavailable": 33
+                      },
+                      "R": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 1.0,
+                        "n_clusters": 2,
+                        "n_expected": 35,
+                        "n_unavailable": 33
+                      },
+                      "V": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 1.0,
+                        "n_clusters": 2,
+                        "n_expected": 35,
+                        "n_unavailable": 33
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.0,
+                        0.14285714285714285
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.05714285714285714,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "image_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          0.5833333333333334
+                        ],
+                        "denominator": 6,
+                        "estimate": 0.25,
+                        "n_clusters": 6,
+                        "n_expected": 35,
+                        "n_unavailable": 29
+                      },
+                      "K": {
+                        "ci95": [
+                          0.0,
+                          0.16666666666666666
+                        ],
+                        "denominator": 6,
+                        "estimate": 0.05555555555555555,
+                        "n_clusters": 6,
+                        "n_expected": 35,
+                        "n_unavailable": 29
+                      },
+                      "R": {
+                        "ci95": [
+                          0.3055555555555555,
+                          0.9166666666666666
+                        ],
+                        "denominator": 6,
+                        "estimate": 0.638888888888889,
+                        "n_clusters": 6,
+                        "n_expected": 35,
+                        "n_unavailable": 29
+                      },
+                      "V": {
+                        "ci95": [
+                          0.875,
+                          1.0
+                        ],
+                        "denominator": 6,
+                        "estimate": 0.9583333333333334,
+                        "n_clusters": 6,
+                        "n_expected": 35,
+                        "n_unavailable": 29
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.05714285714285714,
+                        0.3142857142857143
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.17142857142857143,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "ocr_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.35119047619047616,
+                          0.6964285714285713
+                        ],
+                        "denominator": 28,
+                        "estimate": 0.5178571428571429,
+                        "n_clusters": 28,
+                        "n_expected": 35,
+                        "n_unavailable": 7
+                      },
+                      "K": {
+                        "ci95": [
+                          0.07142857142857142,
+                          0.35714285714285715
+                        ],
+                        "denominator": 28,
+                        "estimate": 0.21428571428571427,
+                        "n_clusters": 28,
+                        "n_expected": 35,
+                        "n_unavailable": 7
+                      },
+                      "R": {
+                        "ci95": [
+                          0.4583333333333333,
+                          0.7797619047619048
+                        ],
+                        "denominator": 28,
+                        "estimate": 0.619047619047619,
+                        "n_clusters": 28,
+                        "n_expected": 35,
+                        "n_unavailable": 7
+                      },
+                      "V": {
+                        "ci95": [
+                          0.9196428571428571,
+                          1.0
+                        ],
+                        "denominator": 28,
+                        "estimate": 0.9642857142857143,
+                        "n_clusters": 28,
+                        "n_expected": 35,
+                        "n_unavailable": 7
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.6571428571428571,
+                        0.9142857142857143
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.8,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  }
+                },
+                "hint_gains": {
+                  "K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 35,
+                    "n_unavailable": 35
+                  },
+                  "R": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 35,
+                    "n_unavailable": 35
+                  },
+                  "R_minus_K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 35,
+                    "n_unavailable": 35
+                  }
+                }
+              },
+              "unavailable": {
+                "condition_differences": {
+                  "hinted_minus_image_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    }
+                  },
+                  "hinted_minus_ocr_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 0.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    }
+                  },
+                  "image_only_minus_ocr_only": {
+                    "I": {
+                      "ci95": [
+                        0.0,
+                        1.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.5,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.0,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "R": {
+                      "ci95": [
+                        0.0,
+                        1.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.5,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "V": {
+                      "ci95": [
+                        -0.25,
+                        1.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.375,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    }
+                  }
+                },
+                "conditions": {
+                  "hinted": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "K": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 0.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "R": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "V": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.0,
+                        0.6
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.2,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "image_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.5,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "K": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.0,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "R": {
+                        "ci95": [
+                          0.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.5,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "V": {
+                        "ci95": [
+                          0.75,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.875,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.0,
+                        0.8
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.4,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "ocr_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.0,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "K": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.0,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "R": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.0,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "V": {
+                        "ci95": [
+                          0.0,
+                          0.8
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.4,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        1.0,
+                        1.0
+                      ],
+                      "denominator": 5,
+                      "estimate": 1.0,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  }
+                },
+                "hint_gains": {
+                  "K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  },
+                  "R": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  },
+                  "R_minus_K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  }
+                }
+              }
+            }
+          },
+          "Qwen/Qwen3-VL-8B-Instruct": {
+            "condition_differences": {
+              "hinted_minus_image_only": {
+                "I": {
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "denominator": 3,
+                  "estimate": 0.0,
+                  "n_clusters": 3,
+                  "n_expected": 40,
+                  "n_unavailable": 37
+                },
+                "K": {
+                  "ci95": [
+                    0.0,
+                    0.25
+                  ],
+                  "denominator": 3,
+                  "estimate": 0.08333333333333333,
+                  "n_clusters": 3,
+                  "n_expected": 40,
+                  "n_unavailable": 37
+                },
+                "R": {
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "denominator": 3,
+                  "estimate": 0.0,
+                  "n_clusters": 3,
+                  "n_expected": 40,
+                  "n_unavailable": 37
+                },
+                "V": {
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "denominator": 3,
+                  "estimate": 0.0,
+                  "n_clusters": 3,
+                  "n_expected": 40,
+                  "n_unavailable": 37
+                }
+              },
+              "hinted_minus_ocr_only": {
+                "I": {
+                  "ci95": [
+                    0.11111111111111112,
+                    0.8333333333333334
+                  ],
+                  "denominator": 6,
+                  "estimate": 0.4444444444444445,
+                  "n_clusters": 6,
+                  "n_expected": 40,
+                  "n_unavailable": 34
+                },
+                "K": {
+                  "ci95": [
+                    0.0,
+                    0.5416666666666666
+                  ],
+                  "denominator": 6,
+                  "estimate": 0.20833333333333334,
+                  "n_clusters": 6,
+                  "n_expected": 40,
+                  "n_unavailable": 34
+                },
+                "R": {
+                  "ci95": [
+                    0.05555555555555556,
+                    0.638888888888889
+                  ],
+                  "denominator": 6,
+                  "estimate": 0.3055555555555556,
+                  "n_clusters": 6,
+                  "n_expected": 40,
+                  "n_unavailable": 34
+                },
+                "V": {
+                  "ci95": [
+                    0.0,
+                    0.5
+                  ],
+                  "denominator": 6,
+                  "estimate": 0.16666666666666666,
+                  "n_clusters": 6,
+                  "n_expected": 40,
+                  "n_unavailable": 34
+                }
+              },
+              "image_only_minus_ocr_only": {
+                "I": {
+                  "ci95": [
+                    0.0,
+                    0.7333333333333334
+                  ],
+                  "denominator": 5,
+                  "estimate": 0.33333333333333337,
+                  "n_clusters": 5,
+                  "n_expected": 40,
+                  "n_unavailable": 35
+                },
+                "K": {
+                  "ci95": [
+                    0.0,
+                    0.65
+                  ],
+                  "denominator": 5,
+                  "estimate": 0.25,
+                  "n_clusters": 5,
+                  "n_expected": 40,
+                  "n_unavailable": 35
+                },
+                "R": {
+                  "ci95": [
+                    0.5000000000000001,
+                    1.0
+                  ],
+                  "denominator": 5,
+                  "estimate": 0.7666666666666667,
+                  "n_clusters": 5,
+                  "n_expected": 40,
+                  "n_unavailable": 35
+                },
+                "V": {
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "denominator": 5,
+                  "estimate": 0.0,
+                  "n_clusters": 5,
+                  "n_expected": 40,
+                  "n_unavailable": 35
+                }
+              }
+            },
+            "conditions": {
+              "hinted": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.6666666666666666,
+                      1.0
+                    ],
+                    "denominator": 9,
+                    "estimate": 0.8888888888888888,
+                    "n_clusters": 9,
+                    "n_expected": 40,
+                    "n_unavailable": 31
+                  },
+                  "K": {
+                    "ci95": [
+                      0.25,
+                      0.8888888888888888
+                    ],
+                    "denominator": 9,
+                    "estimate": 0.5833333333333334,
+                    "n_clusters": 9,
+                    "n_expected": 40,
+                    "n_unavailable": 31
+                  },
+                  "R": {
+                    "ci95": [
+                      1.0,
+                      1.0
+                    ],
+                    "denominator": 9,
+                    "estimate": 1.0,
+                    "n_clusters": 9,
+                    "n_expected": 40,
+                    "n_unavailable": 31
+                  },
+                  "V": {
+                    "ci95": [
+                      0.9166666666666666,
+                      1.0
+                    ],
+                    "denominator": 9,
+                    "estimate": 0.9722222222222222,
+                    "n_clusters": 9,
+                    "n_expected": 40,
+                    "n_unavailable": 31
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.1,
+                    0.35
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.225,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              },
+              "image_only": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.14285714285714285,
+                      0.8571428571428571
+                    ],
+                    "denominator": 7,
+                    "estimate": 0.5714285714285714,
+                    "n_clusters": 7,
+                    "n_expected": 40,
+                    "n_unavailable": 33
+                  },
+                  "K": {
+                    "ci95": [
+                      0.14285714285714285,
+                      0.8571428571428571
+                    ],
+                    "denominator": 7,
+                    "estimate": 0.5357142857142857,
+                    "n_clusters": 7,
+                    "n_expected": 40,
+                    "n_unavailable": 33
+                  },
+                  "R": {
+                    "ci95": [
+                      1.0,
+                      1.0
+                    ],
+                    "denominator": 7,
+                    "estimate": 1.0,
+                    "n_clusters": 7,
+                    "n_expected": 40,
+                    "n_unavailable": 33
+                  },
+                  "V": {
+                    "ci95": [
+                      0.8928571428571429,
+                      1.0
+                    ],
+                    "denominator": 7,
+                    "estimate": 0.9642857142857143,
+                    "n_clusters": 7,
+                    "n_expected": 40,
+                    "n_unavailable": 33
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.075,
+                    0.3
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.175,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              },
+              "ocr_only": {
+                "dimensions": {
+                  "I": {
+                    "ci95": [
+                      0.27419354838709675,
+                      0.5967741935483871
+                    ],
+                    "denominator": 31,
+                    "estimate": 0.43548387096774194,
+                    "n_clusters": 31,
+                    "n_expected": 40,
+                    "n_unavailable": 9
+                  },
+                  "K": {
+                    "ci95": [
+                      0.12903225806451613,
+                      0.41935483870967744
+                    ],
+                    "denominator": 31,
+                    "estimate": 0.2661290322580645,
+                    "n_clusters": 31,
+                    "n_expected": 40,
+                    "n_unavailable": 9
+                  },
+                  "R": {
+                    "ci95": [
+                      0.4731182795698925,
+                      0.7795698924731184
+                    ],
+                    "denominator": 31,
+                    "estimate": 0.6344086021505376,
+                    "n_clusters": 31,
+                    "n_expected": 40,
+                    "n_unavailable": 9
+                  },
+                  "V": {
+                    "ci95": [
+                      0.7983870967741935,
+                      0.9919354838709677
+                    ],
+                    "denominator": 31,
+                    "estimate": 0.9032258064516129,
+                    "n_clusters": 31,
+                    "n_expected": 40,
+                    "n_unavailable": 9
+                  }
+                },
+                "valid_score_coverage": {
+                  "ci95": [
+                    0.65,
+                    0.9
+                  ],
+                  "denominator": 40,
+                  "estimate": 0.775,
+                  "n_clusters": 40,
+                  "n_expected": 40,
+                  "n_unavailable": 0
+                }
+              }
+            },
+            "counts_by_condition": {
+              "hinted": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 21,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 9,
+                  "unavailable": 31
+                },
+                "unavailable_reasons": {
+                  "evidence_id": 20,
+                  "invalid_json": 7,
+                  "truncated": 4
+                }
+              },
+              "image_only": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 20,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 7,
+                  "unavailable": 33
+                },
+                "unavailable_reasons": {
+                  "evidence_id": 24,
+                  "invalid_json": 7,
+                  "truncated": 2
+                }
+              },
+              "ocr_only": {
+                "candidate_run_status": {
+                  "ok": 40
+                },
+                "candidate_truncated": 30,
+                "judge_run_status": {
+                  "ok": 40
+                },
+                "planned_explanations": 40,
+                "score_status": {
+                  "ok": 31,
+                  "unavailable": 9
+                },
+                "unavailable_reasons": {
+                  "checklist_or_schema": 2,
+                  "evidence_id": 5,
+                  "invalid_json": 2
+                }
+              }
+            },
+            "hint_gains": {
+              "K": {
+                "ci95": [
+                  0.0,
+                  0.25
+                ],
+                "denominator": 3,
+                "estimate": 0.08333333333333333,
+                "n_clusters": 3,
+                "n_expected": 40,
+                "n_unavailable": 37
+              },
+              "R": {
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "denominator": 3,
+                "estimate": 0.0,
+                "n_clusters": 3,
+                "n_expected": 40,
+                "n_unavailable": 37
+              },
+              "R_minus_K": {
+                "ci95": [
+                  -0.25,
+                  0.0
+                ],
+                "denominator": 3,
+                "estimate": -0.08333333333333333,
+                "n_clusters": 3,
+                "n_expected": 40,
+                "n_unavailable": 37
+              }
+            },
+            "ocr_subgroups": {
+              "available": {
+                "condition_differences": {
+                  "hinted_minus_image_only": {
+                    "I": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.0,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        0.25
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.08333333333333333,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "R": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.0,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "V": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.0,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    }
+                  },
+                  "hinted_minus_ocr_only": {
+                    "I": {
+                      "ci95": [
+                        0.0,
+                        0.7333333333333334
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.33333333333333337,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        0.15
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.05,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "R": {
+                      "ci95": [
+                        0.0,
+                        0.3666666666666667
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.16666666666666669,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    },
+                    "V": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.0,
+                      "n_clusters": 5,
+                      "n_expected": 35,
+                      "n_unavailable": 30
+                    }
+                  },
+                  "image_only_minus_ocr_only": {
+                    "I": {
+                      "ci95": [
+                        0.0,
+                        1.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.5555555555555556,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        1.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.4166666666666667,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "R": {
+                      "ci95": [
+                        0.3333333333333333,
+                        1.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.6111111111111112,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    },
+                    "V": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 3,
+                      "estimate": 0.0,
+                      "n_clusters": 3,
+                      "n_expected": 35,
+                      "n_unavailable": 32
+                    }
+                  }
+                },
+                "conditions": {
+                  "hinted": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.625,
+                          1.0
+                        ],
+                        "denominator": 8,
+                        "estimate": 0.875,
+                        "n_clusters": 8,
+                        "n_expected": 35,
+                        "n_unavailable": 27
+                      },
+                      "K": {
+                        "ci95": [
+                          0.1875,
+                          0.875
+                        ],
+                        "denominator": 8,
+                        "estimate": 0.53125,
+                        "n_clusters": 8,
+                        "n_expected": 35,
+                        "n_unavailable": 27
+                      },
+                      "R": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 8,
+                        "estimate": 1.0,
+                        "n_clusters": 8,
+                        "n_expected": 35,
+                        "n_unavailable": 27
+                      },
+                      "V": {
+                        "ci95": [
+                          0.90625,
+                          1.0
+                        ],
+                        "denominator": 8,
+                        "estimate": 0.96875,
+                        "n_clusters": 8,
+                        "n_expected": 35,
+                        "n_unavailable": 27
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.11428571428571428,
+                        0.37142857142857144
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.22857142857142856,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "image_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.4,
+                          1.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.8,
+                        "n_clusters": 5,
+                        "n_expected": 35,
+                        "n_unavailable": 30
+                      },
+                      "K": {
+                        "ci95": [
+                          0.35,
+                          1.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.75,
+                        "n_clusters": 5,
+                        "n_expected": 35,
+                        "n_unavailable": 30
+                      },
+                      "R": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 1.0,
+                        "n_clusters": 5,
+                        "n_expected": 35,
+                        "n_unavailable": 30
+                      },
+                      "V": {
+                        "ci95": [
+                          0.85,
+                          1.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.95,
+                        "n_clusters": 5,
+                        "n_expected": 35,
+                        "n_unavailable": 30
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.02857142857142857,
+                        0.2571428571428571
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.14285714285714285,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "ocr_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.33974358974358976,
+                          0.6923076923076923
+                        ],
+                        "denominator": 26,
+                        "estimate": 0.5192307692307693,
+                        "n_clusters": 26,
+                        "n_expected": 35,
+                        "n_unavailable": 9
+                      },
+                      "K": {
+                        "ci95": [
+                          0.15384615384615385,
+                          0.5
+                        ],
+                        "denominator": 26,
+                        "estimate": 0.3173076923076923,
+                        "n_clusters": 26,
+                        "n_expected": 35,
+                        "n_unavailable": 9
+                      },
+                      "R": {
+                        "ci95": [
+                          0.5576923076923077,
+                          0.8653846153846154
+                        ],
+                        "denominator": 26,
+                        "estimate": 0.717948717948718,
+                        "n_clusters": 26,
+                        "n_expected": 35,
+                        "n_unavailable": 9
+                      },
+                      "V": {
+                        "ci95": [
+                          0.8173076923076923,
+                          1.0
+                        ],
+                        "denominator": 26,
+                        "estimate": 0.9230769230769231,
+                        "n_clusters": 26,
+                        "n_expected": 35,
+                        "n_unavailable": 9
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.6,
+                        0.8857142857142857
+                      ],
+                      "denominator": 35,
+                      "estimate": 0.7428571428571429,
+                      "n_clusters": 35,
+                      "n_expected": 35,
+                      "n_unavailable": 0
+                    }
+                  }
+                },
+                "hint_gains": {
+                  "K": {
+                    "ci95": [
+                      0.0,
+                      0.25
+                    ],
+                    "denominator": 3,
+                    "estimate": 0.08333333333333333,
+                    "n_clusters": 3,
+                    "n_expected": 35,
+                    "n_unavailable": 32
+                  },
+                  "R": {
+                    "ci95": [
+                      0.0,
+                      0.0
+                    ],
+                    "denominator": 3,
+                    "estimate": 0.0,
+                    "n_clusters": 3,
+                    "n_expected": 35,
+                    "n_unavailable": 32
+                  },
+                  "R_minus_K": {
+                    "ci95": [
+                      -0.25,
+                      0.0
+                    ],
+                    "denominator": 3,
+                    "estimate": -0.08333333333333333,
+                    "n_clusters": 3,
+                    "n_expected": 35,
+                    "n_unavailable": 32
+                  }
+                }
+              },
+              "unavailable": {
+                "condition_differences": {
+                  "hinted_minus_image_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 0,
+                      "estimate": null,
+                      "n_clusters": 0,
+                      "n_expected": 5,
+                      "n_unavailable": 5
+                    }
+                  },
+                  "hinted_minus_ocr_only": {
+                    "I": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "K": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "R": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    },
+                    "V": {
+                      "ci95": null,
+                      "denominator": 1,
+                      "estimate": 1.0,
+                      "n_clusters": 1,
+                      "n_expected": 5,
+                      "n_unavailable": 4
+                    }
+                  },
+                  "image_only_minus_ocr_only": {
+                    "I": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.0,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "K": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.0,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "R": {
+                      "ci95": [
+                        1.0,
+                        1.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 1.0,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    },
+                    "V": {
+                      "ci95": [
+                        0.0,
+                        0.0
+                      ],
+                      "denominator": 2,
+                      "estimate": 0.0,
+                      "n_clusters": 2,
+                      "n_expected": 5,
+                      "n_unavailable": 3
+                    }
+                  }
+                },
+                "conditions": {
+                  "hinted": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "K": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "R": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      },
+                      "V": {
+                        "ci95": null,
+                        "denominator": 1,
+                        "estimate": 1.0,
+                        "n_clusters": 1,
+                        "n_expected": 5,
+                        "n_unavailable": 4
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.0,
+                        0.6
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.2,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "image_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.0,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "K": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 0.0,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "R": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 1.0,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      },
+                      "V": {
+                        "ci95": [
+                          1.0,
+                          1.0
+                        ],
+                        "denominator": 2,
+                        "estimate": 1.0,
+                        "n_clusters": 2,
+                        "n_expected": 5,
+                        "n_unavailable": 3
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        0.0,
+                        0.8
+                      ],
+                      "denominator": 5,
+                      "estimate": 0.4,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  },
+                  "ocr_only": {
+                    "dimensions": {
+                      "I": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.0,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "K": {
+                        "ci95": [
+                          0.0,
+                          0.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.0,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "R": {
+                        "ci95": [
+                          0.0,
+                          0.6
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.2,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      },
+                      "V": {
+                        "ci95": [
+                          0.4,
+                          1.0
+                        ],
+                        "denominator": 5,
+                        "estimate": 0.8,
+                        "n_clusters": 5,
+                        "n_expected": 5,
+                        "n_unavailable": 0
+                      }
+                    },
+                    "valid_score_coverage": {
+                      "ci95": [
+                        1.0,
+                        1.0
+                      ],
+                      "denominator": 5,
+                      "estimate": 1.0,
+                      "n_clusters": 5,
+                      "n_expected": 5,
+                      "n_unavailable": 0
+                    }
+                  }
+                },
+                "hint_gains": {
+                  "K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  },
+                  "R": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  },
+                  "R_minus_K": {
+                    "ci95": null,
+                    "denominator": 0,
+                    "estimate": null,
+                    "n_clusters": 0,
+                    "n_expected": 5,
+                    "n_unavailable": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

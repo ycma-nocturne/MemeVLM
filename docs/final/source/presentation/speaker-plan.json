@@ -1,0 +1,90 @@
+{
+  "cover": {
+    "cue": "Point to the tall and short blocks in the scale-reversal schematic.",
+    "script": "Imagine four kilobytes as a towering figure and eight gigabytes as a much smaller one. Reading the numbers is easy. Explaining why the size relationship is reversed takes more. We tested whether a vision-language model could follow the evidence behind a joke as that evidence changed."
+  },
+  "demo": {
+    "cue": "Pause after each question, then point to the caption and expression in the schematics.",
+    "script": "These schematics illustrate two benchmark cases. On the left, why would eight gigabytes fear four kilobytes? The joke contrasts the computing resources associated with a Moon mission and the appetite of a modern web browser. On the right, a teacher announces a fun project, while the cat looks thoroughly unimpressed. Naming a browser or recognizing a cat misses the relationship that makes the joke. We built a controlled task to test that difference."
+  },
+  "evaluation": {
+    "cue": "Trace the original, target edit, and sham with their reference readings, then point to the MemeQA branch.",
+    "script": "The controlled test requires six correct decisions per family: one cue judgment and one relation choice on each of its three variants. On natural memes we use the existing MemeQA questions and choices, and pool exact accuracy across eligible questions. The same base and six adapters take both tests. Our paired bootstrap resamples individual synthetic families or whole natural images, retaining every question on each sampled image."
+  },
+  "architecture": {
+    "cue": "Follow the watch image and question to the recorded model choice, then point to the amber training path.",
+    "script": "The frozen vision encoder reads the image. Its visual tokens join the prompt in the language decoder. We add rank-eight LoRA adapters to the attention and feed-forward projections in each of 36 language blocks. Only the adapters update during training. At inference we use fixed prompts and greedy decoding across all seven model arms."
+  },
+  "budget": {
+    "cue": "Use the two training thumbnails to distinguish a supervision row from an image, then follow the shared budget.",
+    "script": "Both thumbnails are actual training images. Airplane Mode supplies two supervision rows. Morning Run appears eight times per replay epoch. Both recipes process seven hundred seventy rows per epoch, with three epochs and three paired seeds. Each run selects its checkpoint using the same validation split. The language mix and the diversity of examples vary together."
+  },
+  "checkpoint": {
+    "cue": "Read the left and right axes separately. Point to the first measured checkpoint. Handoff at 5:19.",
+    "script": "All six runs completed the full training schedule. On the left, training loss keeps falling on each recipe's own examples. On the right, shared-set validation loss is lowest at the first measured checkpoint, step ninety-seven, for every run. It rises at the two later evaluations. We therefore use each run's step-ninety-seven adapter for the held-out tests. This is the best checkpoint among the three we measured. Speaker 3 will show what those adapters achieve."
+  },
+  "synthetic": {
+    "cue": "Name the strict family metric, then compare mixed-corpus LoRA with the matched replay.",
+    "script": "On 32 held-out families, mixed-corpus LoRA passes 92.7 percent on average. replay passes 57.3 percent and the frozen base passes 37.5 percent. The mixed-corpus advantage over replay is 35.42 percentage points, with a paired family interval from 21.88 to 50 points. Every arm recognized the specified cue on all 96 variants. It was their choice of relation that separated the models."
+  },
+  "natural": {
+    "cue": "State the denominator, compare the two bars for one seed, and point to both intervals.",
+    "script": "On 816 questions across 134 natural memes, every matched seed fixes some replay errors and makes some new ones. At seed 42, 46 answers improve and 44 become wrong. Across seeds, mixed-corpus LoRA averages 54.82 percent, a gain of 0.90 points over replay. Its gain over the frozen base is 1.27 points. Both paired image-level intervals span zero, so the direction and size of transfer remain uncertain."
+  },
+  "conclusion": {
+    "cue": "Compare the two estimates using the same replay control. Finish at 8:45.",
+    "script": "Against matched replay, mixed-corpus training improved authored edits. The MemeQA transfer estimate remained uncertain. In the frozen-model controls, both frozen models detected every cue and passed five of ten triples. Across both edit studies, choosing the meaning remained the harder step."
+  },
+  "qa": [
+    {
+      "speaker": 0,
+      "question": "Which pieces did you build yourselves?",
+      "answer": "We authored the 240 controlled scenes and their edits, constructed matched mixed-corpus and replay recipes, and implemented exact cue and relation scoring for each family. We evaluated independently authored memes using the existing MemeQA questions and choices."
+    },
+    {
+      "speaker": 0,
+      "question": "Why include a sham edit?",
+      "answer": "A model can change its answer whenever it sees an edit. The sham checks whether it keeps the same interpretation when the relevant cue stays the same. The complete-family score requires correct cue and relation answers on the original, the target edit, and the sham."
+    },
+    {
+      "speaker": 1,
+      "question": "Were 291 steps enough, and why use step 97?",
+      "answer": "Every run completed 291 updates. We measured validation loss at steps 97, 194, and 291. Step 97 had the lowest observed loss in all six runs. The shared validation mix had 160 English and 33 Chinese rows, so this selection is tied to that mix."
+    },
+    {
+      "speaker": 1,
+      "question": "What differs between the two training recipes?",
+      "answer": "The two recipes matched exposures and optimizer steps. They differed in language, unique examples, task diversity and question formats. The measured contrast therefore captures the combined effect of the full recipe."
+    },
+    {
+      "speaker": 2,
+      "question": "Why does MemeQA show a smaller gain?",
+      "answer": "Our authored families share a renderer and task rubric with the authored training set. MemeQA uses independently authored memes and its native multiple-choice questions. The current interval includes zero, so this test leaves the size and direction of any transfer gain uncertain."
+    },
+    {
+      "speaker": 2,
+      "question": "What did the earlier 2B edit pilot show?",
+      "answer": "The frozen 2B model and its LoRA variant each got one of ten target edits and zero complete triples in the structured pilot. That motivated checking the relation as well as the cue. The 4B controlled study uses a different set of examples and estimates the effect of two matched training recipes."
+    },
+    {
+      "speaker": 2,
+      "question": "How do the frozen and replay scores compare with human ratings?",
+      "evidence": "human-audit",
+      "answer": "Use the item counts and overlapping scores in the audit appendix."
+    },
+    {
+      "speaker": 2,
+      "question": "What do the human-rated image and hint comparisons show?",
+      "evidence": "reference-coverage",
+      "answer": "The paired appendix gives the image-versus-OCR and factual-hint contrasts."
+    }
+  ],
+  "families": {
+    "cue": "Compare the first and middle panels, then the corner marks in the outer panels. Handoff at 2:24.",
+    "script": "The instruction here is identical in all three versions: put the files in the cloud. On the left, the intern takes the phrase literally and puts paper files in the sky. The target edit replaces that outcome with remote storage. The sham changes only a corner mark, so the literal joke survives. Each version has a reference cue and relation. We created 240 such families across eight mechanisms and assigned each whole family to one split. That leaves 32 families for the held-out test. Speaker 2 will explain how we scored them."
+  },
+  "example": {
+    "cue": "Point first to the words on the edited watch, then to each interpretation.",
+    "script": "Here is an actual model disagreement. On the original watch, the displayed activity is three hours of clapping. The target edit changes the wording to walking and replaces the pictogram. Both models correctly answer that the edited watch no longer says clapping. The frozen base still chooses the relation that the watch counted clapping as exercise. The mixed-corpus adapter, seed 42, chooses the walking interpretation. Both were correct on the original and the sham. This is why we score the cue and the relation separately."
+  }
+}

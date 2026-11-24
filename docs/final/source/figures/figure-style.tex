@@ -1,0 +1,55 @@
+\usepackage[paperwidth=175mm,paperheight=67mm,margin=0mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,backgrounds,calc}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+
+\definecolor{navy}{HTML}{1D3552}
+\definecolor{ink}{HTML}{243749}
+\definecolor{slate}{HTML}{526677}
+\definecolor{linegray}{HTML}{A4B0BC}
+\definecolor{pale}{HTML}{F1F4F7}
+\definecolor{palenavy}{HTML}{E8EFF6}
+\definecolor{gold}{HTML}{8E5D21}
+\definecolor{palegold}{HTML}{FAF0E0}
+\definecolor{panelwash}{HTML}{F8FAFD}
+\definecolor{panelrule}{HTML}{8192A5}
+\definecolor{blueedge}{HTML}{4977A8}
+\definecolor{bluewash}{HTML}{EAF2FD}
+\definecolor{tealedge}{HTML}{408278}
+\definecolor{tealwash}{HTML}{E9F6F2}
+\definecolor{violetedge}{HTML}{7657A3}
+\definecolor{violetwash}{HTML}{F1EDFA}
+\definecolor{ochreedge}{HTML}{A77838}
+\definecolor{ochrewash}{HTML}{FAF0DF}
+
+\tikzset{
+  card/.style={draw=linegray,fill=pale,rounded corners=1.1mm,line width=.48pt},
+  cool/.style={card,draw=navy,fill=palenavy},
+  warm/.style={card,draw=gold,fill=palegold},
+  labeltext/.style={align=center,text=ink,inner sep=0pt,font=\sffamily\fontsize{8.5}{9.8}\selectfont},
+  accent/.style={labeltext,text=gold},
+  note/.style={labeltext,text=slate,font=\sffamily\fontsize{7.5}{9}\selectfont},
+  titleline/.style={labeltext,text=navy,font=\sffamily\bfseries\fontsize{9.5}{10.6}\selectfont},
+  flow/.style={draw=navy,line width=.60pt,-{Stealth[length=1.42mm,width=1.1mm]}},
+  residual/.style={flow,draw=slate,dash pattern=on 2pt off 1.3pt},
+  gradient/.style={flow,draw=gold,dash pattern=on 2pt off 1.3pt},
+  stageframe/.style={draw=panelrule,fill=panelwash,rounded corners=1.4mm,
+    line width=.58pt,dash pattern=on 2.3pt off 1.6pt},
+  panelhead/.style={align=center,text=navy,inner sep=0pt,
+    font=\sffamily\bfseries\fontsize{9.4}{10.8}\selectfont},
+  bluecard/.style={card,draw=blueedge,fill=bluewash},
+  tealcard/.style={card,draw=tealedge,fill=tealwash},
+  violetcard/.style={card,draw=violetedge,fill=violetwash},
+  ochrecard/.style={card,draw=ochreedge,fill=ochrewash},
+  canvas/.style={x=1mm,y=1mm,baseline=0pt},
+}
+\newcommand{\figbounds}{\path[use as bounding box] (0,0) rectangle (174.9,66.9);}
+\newcommand{\card}[5]{\draw[#1] (#2,#3) rectangle (#4,#5);}
+\newcommand{\labelat}[4]{\node[#1] at (#2,#3) {#4};}
+\input{operation-icons}

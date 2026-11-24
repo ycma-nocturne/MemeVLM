@@ -6,6 +6,7 @@
 /results/
 /demo/
 /work/
+/final-expansion/
 /final/
 /submission/
 /benchmark-catalog/
@@ -33,6 +34,14 @@
 !/local-study/delivery/task_a_results.py
 *.freeze.json
 private_key.json
+coordinator-only/
+frozen-judge-config.json
+explanation-key.json
+material-key.json
+reference-ledger.jsonl
+scored.jsonl
+responses.jsonl
+gold.jsonl
 /Archive/
 /archives/
 /deliverables/
@@ -65,3 +74,8 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+# Document builds
+/docs/final/node_modules/
+/docs/final/source/report/build/
+/docs/final/source/proposal/build/

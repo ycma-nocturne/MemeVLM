@@ -45,6 +45,8 @@ Create separate Python environments for Qwen and InternVL on the GPU host. Insta
 
 Run a development pilot and record the code commit, input hash, checkpoint revisions, CUDA and driver versions, GPU, and resolved dependencies. The adapters pin checkpoint revisions. Keep one `runs` directory and its adjacent `runs.profiles` directory for all stages.
 
+Qwen runs with greedy decoding and disables checkpoint generation defaults. Start a fresh ledger if existing Qwen outputs used checkpoint defaults.
+
 ```bash
 q4=Qwen/Qwen3-VL-4B-Instruct
 q8=Qwen/Qwen3-VL-8B-Instruct
@@ -76,6 +78,8 @@ split=dev
 
 ## 3. Score, audit, and export
 
+For NFS mounts without exclusive directory rename support, copy the ledger and its adjacent profiles to a local filesystem and run these exports there.
+
 ```bash
 python -m meme_study.reference_cli score --prepared "$prepared" --runs "$runs" \
   --output "$work/scores-dev" --allow-partial
@@ -85,7 +89,9 @@ python -m meme_study.reference_cli audit --scores "$work/scores-dev" \
 
 Have two reviewers score the 10 blinded development explanations independently. After calibration, record the frozen inputs and judge instructions. Run the full-stage commands with `split=test`, using the same shared ledger. If calibration changes the configuration, use the new prepared directory and record its hash.
 
-Once the test run is complete, use fresh output directories. Export the 20 blinded test explanations for independent review and retain the two sets of ratings with the run records.
+If the frozen scoring policy allows a single `json` fence around a complete judge response, add `--allow-judge-json-fence` to both score commands. The judge must still supply every checklist ID and verbatim evidence.
+
+Once the test run is complete, use fresh output directories. Export the 20 blinded test explanations for independent review and retain the two rating files with the run records. See the [frozen numbered-span and citation replay instructions](../repro/chinese/README.md) to reproduce the reported Chinese coverage and reviewer aggregates.
 
 ```bash
 scores="$work/scores"

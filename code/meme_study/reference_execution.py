@@ -275,7 +275,7 @@ def _dispatch_reference(*,jobs,snapshot,config,root,runs,model,task,split,device
             **{status: counts[status] for status in ('ok', 'failed', 'interrupted')}}
 
 
-def score_reference(*, prepared, runs, output, allow_partial=False):
+def score_reference(*, prepared, runs, output, allow_partial=False, allow_judge_json_fence=False):
     """Score verified raw outputs; unavailable judgments remain null, never zero."""
     package, snapshot = load_prepared(prepared), read_reference_run(runs)
     jobs = _bound(package, snapshot)
@@ -317,7 +317,8 @@ def score_reference(*, prepared, runs, output, allow_partial=False):
                        judge_output_sha256=content_hash(judge) if judge else None)
             if status == 'ok' and judge and judge['status'] == 'ok':
                 row['score'] = score_checklist(candidate['text'], ref['reference']['checklist'],
-                                                judge['text'], truncated=judge['truncated'])
+                                                judge['text'], truncated=judge['truncated'],
+                                                allow_json_fence=allow_judge_json_fence)
         else:
             row['variant'] = job['variant']
             pair = pairs[job['family_id']]
@@ -345,6 +346,7 @@ def score_reference(*, prepared, runs, output, allow_partial=False):
     provenance = {'protocol_id': PROTOCOL_ID, 'prepared_sha256': package['prepared_sha256'],
                   'prepared_provenance_sha256': package['provenance_sha256'],
                   'ledger_sha256': snapshot['ledger_sha256'],
+                  'allow_judge_json_fence': allow_judge_json_fence,
                   'artifact_sha256': {name: _sha(raw) for name, raw in artifacts.items()},
                   'scoring_code_sha256': _sha(Path(__file__).with_name('reference_scoring.py').read_bytes()),
                   'execution_code_sha256': _sha(Path(__file__).read_bytes()), 'model_calls': 0}

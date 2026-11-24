@@ -1,0 +1,64 @@
+{
+  "arms": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "bilingual-42"
+    },
+    {
+      "name": "bilingual-43"
+    },
+    {
+      "name": "bilingual-44"
+    },
+    {
+      "name": "chinese-42"
+    },
+    {
+      "name": "chinese-43"
+    },
+    {
+      "name": "chinese-44"
+    }
+  ],
+  "bootstrap": {
+    "draws": 10000,
+    "interval": "Percentile CI conditional on these trained seeds.",
+    "seed": 6000,
+    "unit": "paired image family across all seeds and questions"
+  },
+  "native": {
+    "images": 166,
+    "new_images": 134,
+    "new_questions": 816,
+    "primary": "Exact option accuracy on every eligible question from images outside the 32-image pilot.",
+    "questions": 1027,
+    "secondary": "All eligible native four-option questions. Inputs are held out from adapter training."
+  },
+  "study": "memevlm-4b-matched-budget-replication-v1",
+  "synthetic": {
+    "families": 32,
+    "primary": "Strict original/target/sham triple accuracy",
+    "prior_exposure": "Seed 42 bilingual vs base results were previously observed.",
+    "questions": 96
+  },
+  "training": {
+    "bilingual_unique_train_rows": 770,
+    "chinese_unique_train_rows": 98,
+    "matched_train_rows_per_epoch": 770,
+    "optimizer_steps": 291,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "selection": "Lowest loss on the common bilingual validation set. Replicate seed 42 already exists.",
+    "shared_validation_rows": 193,
+    "validation_steps": [
+      97,
+      194,
+      291
+    ]
+  }
+}

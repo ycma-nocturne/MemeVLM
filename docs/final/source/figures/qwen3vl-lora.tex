@@ -1,0 +1,96 @@
+\documentclass{article}
+\input{figure-style}
+\tikzset{
+  deepflow/.style={residual,draw=violetedge},
+  visualslot/.style={draw=tealedge,fill=tealwash,rounded corners=.4mm,line width=.45pt},
+  textslot/.style={draw=blueedge,fill=bluewash,rounded corners=.4mm,line width=.45pt},
+}
+\begin{document}
+\noindent\begin{tikzpicture}[canvas]
+\figbounds
+
+\node[panelhead,anchor=west] at (2.5,64.1) {Held-out inference};
+\labelat{note}{14.7}{57.7}{Fitness Watch};
+\node[inner sep=0pt] at (14.7,44.5)
+  {\includegraphics[height=17.5mm]{../assets/watch-original.png}};
+\draw[draw=linegray,rounded corners=.55mm,line width=.48pt]
+  (4.55,35.6) rectangle (24.85,53.4);
+
+\card{bluecard}{31}{37}{59.5}{51}
+\opicon{34}{46.9}{blueedge}{grid}
+\labelat{labeltext}{47.3}{46.9}{\textbf{Vision encoder}}
+\labelat{note}{45.25}{41.1}{24 frozen ViT blocks}
+\draw[flow] (24.85,44.5) -- (31,44.5);
+
+\card{tealcard}{66}{37}{99}{51}
+\labelat{labeltext}{82.5}{46.9}{\textbf{Main patch merger}}
+\opicon{71.1}{41.1}{tealedge}{tokens}
+\labelat{note}{84.6}{41.1}{Visual tokens}
+\draw[flow] (59.5,44.5) -- (66,44.5);
+
+\card{card}{2.5}{16}{35.5}{29.8}
+\labelat{note}{19}{26.2}{Abridged prompt}
+\labelat{labeltext}{19}{20.2}{What did the\\watch count?}
+\card{bluecard}{41.5}{16}{63.5}{29.8}
+\labelat{labeltext}{52.5}{25.6}{\textbf{Embed text}}
+\opicon{46}{20.4}{blueedge}{text}
+\labelat{note}{54.2}{20.4}{Frozen}
+\draw[flow] (35.5,22.9) -- (41.5,22.9);
+
+\card{card}{70}{16}{99}{29.8}
+\labelat{labeltext}{84.5}{25.6}{\textbf{Fused token stream}}
+\foreach \x in {73.7,78.1,82.5}{
+  \card{visualslot}{\x}{18.3}{\x+3.3}{21.7}
+}
+\foreach \x in {87.4,91.8}{
+  \card{textslot}{\x}{18.3}{\x+3.3}{21.7}
+}
+\draw[flow] (82.5,37) -- (82.5,29.8);
+\draw[flow] (63.5,22.9) -- (70,22.9);
+
+% Intermediate visual features have a separate injection path.
+\card{violetcard}{66}{58.4}{99}{65.8}
+\labelat{labeltext}{82.5}{62.1}{\textbf{DeepStack mergers}}
+\draw[deepflow] (45.25,51) -- (45.25,62.1) -- (66,62.1);
+\labelat{note}{54.9}{57.5}{3 ViT taps}
+
+\card{bluecard}{110.7}{24.1}{141.6}{48.7}
+\card{bluecard}{108.6}{22.2}{139.5}{46.8}
+\card{bluecard}{106.5}{20.3}{137.4}{44.9}
+\labelat{labeltext}{122}{40.5}{\textbf{36 language blocks}}
+\opicon{110.3}{35.5}{blueedge}{layers}
+\labelat{note}{125}{35.5}{Frozen base weights}
+\card{ochrecard}{111.5}{23.3}{132.5}{31}
+\labelat{labeltext}{122}{27.1}{$+(\alpha/r)BA$}
+\draw[flow] (99,22.9) -- (106.5,22.9);
+\draw[deepflow] (99,62.1) -- (121.95,62.1) -- (121.95,48.7);
+\labelat{note}{146.5}{63.0}{Added at image slots after blocks 1--3}
+
+\card{bluecard}{146}{39.7}{172.5}{50.8}
+\labelat{labeltext}{159.25}{45.25}{\textbf{Frozen LM head}}
+\draw[flow] (141.6,45.25) -- (146,45.25);
+
+\card{tealcard}{146}{16}{172.5}{32.8}
+\labelat{note}{159.25}{28.4}{Structured response}
+\opicon{149.1}{25.5}{tealedge}{chat}
+\labelat{labeltext}{159.25}{21.7}{\textbf{Cue and relation}}
+\draw[flow] (159.25,39.7) -- (159.25,32.8);
+
+% This schematic training path is independent of the held-out example above.
+\draw[draw=ochreedge,fill=ochrewash,rounded corners=.9mm,line width=.46pt]
+  (2.5,1.5) rectangle (172.5,11.9);
+\opicon{6.7}{6.65}{ochreedge}{tune}
+\node[panelhead,anchor=west] at (10.4,6.65) {Training only};
+\labelat{labeltext}{54}{8.15}{Labeled examples}
+\labelat{note}{54}{3.95}{Teacher-forced forward pass}
+\draw[flow,draw=ochreedge] (70,6.65) -- (75,6.65);
+\opicon{78.15}{8.15}{ochreedge}{loss}
+\labelat{labeltext}{94}{8.15}{\textbf{Answer-only loss}}
+\labelat{note}{92.5}{3.95}{Prompt labels masked}
+\draw[flow,draw=ochreedge] (107,6.65) -- (116,6.65);
+\labelat{labeltext}{144.3}{8.15}{\textbf{Update LoRA} \quad $r=8,\ \alpha=16$}
+\labelat{note}{144.3}{3.95}{Attention $q,k,v,o$ and MLP gate, up, down}
+\draw[gradient] (122,11.9) -- (122,23.3);
+
+\end{tikzpicture}
+\end{document}

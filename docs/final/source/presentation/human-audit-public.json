@@ -1,0 +1,118 @@
+{
+  "scope": {
+    "explanations": 360,
+    "dev": 120,
+    "heldOut": 240
+  },
+  "humanAgreement": {
+    "allItems": [
+      4354,
+      4386
+    ],
+    "heldOutItems": [
+      2929,
+      2952
+    ],
+    "explanationDecisions": 45,
+    "explanationsAffected": 17,
+    "singleImageCases": 2,
+    "materialDecisions": 11,
+    "materialCases": 10,
+    "singleImageDecisions": 3,
+    "singleImageQuestions": 45
+  },
+  "judgeComparison": {
+    "frozen": {
+      "valid": [
+        91,
+        240
+      ],
+      "r1": [
+        560,
+        1110
+      ],
+      "r2": [
+        560,
+        1110
+      ]
+    },
+    "replay": {
+      "valid": [
+        188,
+        240
+      ],
+      "r1": [
+        1441,
+        2297
+      ],
+      "r2": [
+        1440,
+        2297
+      ]
+    },
+    "shared": 91,
+    "maskedAnswers": 80
+  },
+  "rq1": {
+    "familiesPerModel": 35,
+    "reasoning": {
+      "4B": [
+        57.1,
+        57.1
+      ],
+      "8B": [
+        76.7,
+        77.6
+      ]
+    }
+  },
+  "rq2": {
+    "allFamiliesPerModel": 40,
+    "flaggedFamilies": 13,
+    "filteredFamiliesPerModel": 27,
+    "all": {
+      "4B": {
+        "K": [
+          26.0,
+          24.2
+        ],
+        "R": [
+          29.6,
+          27.1
+        ]
+      },
+      "8B": {
+        "K": [
+          12.9,
+          16.0
+        ],
+        "R": [
+          11.2,
+          12.1
+        ]
+      }
+    },
+    "filtered": {
+      "4B": {
+        "K": [
+          9.3,
+          8.3
+        ],
+        "R": [
+          16.0,
+          14.2
+        ]
+      },
+      "8B": {
+        "K": [
+          5.6,
+          10.2
+        ],
+        "R": [
+          4.3,
+          5.6
+        ]
+      }
+    }
+  }
+}

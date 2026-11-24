@@ -1,0 +1,289 @@
+{
+  "native_memeqa": {
+    "all_eligible": {
+      "by_profile": {
+        "bilingual": {
+          "mean": 0.5462512171372931,
+          "seed_sample_std": 0.004462099021378611
+        },
+        "chinese": {
+          "mean": 0.5423563777994158,
+          "seed_sample_std": 0.001947419668938688
+        }
+      },
+      "images": 166,
+      "paired_contrasts": {
+        "bilingual_minus_base": {
+          "delta": 0.008763388510223957,
+          "paired_image_bootstrap_ci95": [
+            -0.011482939632545895,
+            0.028871391076115523
+          ]
+        },
+        "bilingual_minus_chinese": {
+          "delta": 0.003894839337877265,
+          "paired_image_bootstrap_ci95": [
+            -0.014330218068535861,
+            0.022077114427860662
+          ]
+        },
+        "chinese_minus_base": {
+          "delta": 0.004868549172346692,
+          "paired_image_bootstrap_ci95": [
+            -0.00863213811420979,
+            0.01815943367189901
+          ]
+        }
+      },
+      "per_arm": {
+        "base": {
+          "accuracy": 0.5374878286270691,
+          "correct": 552,
+          "denominator": 1027
+        },
+        "bilingual-42": {
+          "accuracy": 0.5413826679649465,
+          "correct": 556,
+          "denominator": 1027
+        },
+        "bilingual-43": {
+          "accuracy": 0.5501460564751705,
+          "correct": 565,
+          "denominator": 1027
+        },
+        "bilingual-44": {
+          "accuracy": 0.5472249269717624,
+          "correct": 562,
+          "denominator": 1027
+        },
+        "chinese-42": {
+          "accuracy": 0.5443037974683544,
+          "correct": 559,
+          "denominator": 1027
+        },
+        "chinese-43": {
+          "accuracy": 0.5423563777994158,
+          "correct": 557,
+          "denominator": 1027
+        },
+        "chinese-44": {
+          "accuracy": 0.5404089581304771,
+          "correct": 555,
+          "denominator": 1027
+        }
+      },
+      "per_arm_valid": {
+        "base": 1027,
+        "bilingual-42": 1027,
+        "bilingual-43": 1027,
+        "bilingual-44": 1027,
+        "chinese-42": 1027,
+        "chinese-43": 1027,
+        "chinese-44": 1027
+      },
+      "questions": 1027
+    },
+    "unseen_pilot_images": {
+      "by_profile": {
+        "bilingual": {
+          "mean": 0.5482026143790849,
+          "seed_sample_std": 0.005102122547711154
+        },
+        "chinese": {
+          "mean": 0.5392156862745098,
+          "seed_sample_std": 0.002450980392156854
+        }
+      },
+      "images": 134,
+      "paired_contrasts": {
+        "bilingual_minus_base": {
+          "delta": 0.012663398692810413,
+          "paired_image_bootstrap_ci95": [
+            -0.011412829594647799,
+            0.03581603581603579
+          ]
+        },
+        "bilingual_minus_chinese": {
+          "delta": 0.008986928104575131,
+          "paired_image_bootstrap_ci95": [
+            -0.011834319526627219,
+            0.029879705083430366
+          ]
+        },
+        "chinese_minus_base": {
+          "delta": 0.003676470588235281,
+          "paired_image_bootstrap_ci95": [
+            -0.011934156378600846,
+            0.019122120817036094
+          ]
+        }
+      },
+      "per_arm": {
+        "base": {
+          "accuracy": 0.5355392156862745,
+          "correct": 437,
+          "denominator": 816
+        },
+        "bilingual-42": {
+          "accuracy": 0.5441176470588235,
+          "correct": 444,
+          "denominator": 816
+        },
+        "bilingual-43": {
+          "accuracy": 0.553921568627451,
+          "correct": 452,
+          "denominator": 816
+        },
+        "bilingual-44": {
+          "accuracy": 0.5465686274509803,
+          "correct": 446,
+          "denominator": 816
+        },
+        "chinese-42": {
+          "accuracy": 0.5416666666666666,
+          "correct": 442,
+          "denominator": 816
+        },
+        "chinese-43": {
+          "accuracy": 0.5392156862745098,
+          "correct": 440,
+          "denominator": 816
+        },
+        "chinese-44": {
+          "accuracy": 0.5367647058823529,
+          "correct": 438,
+          "denominator": 816
+        }
+      },
+      "per_arm_valid": {
+        "base": 816,
+        "bilingual-42": 816,
+        "bilingual-43": 816,
+        "bilingual-44": 816,
+        "chinese-42": 816,
+        "chinese-43": 816,
+        "chinese-44": 816
+      },
+      "questions": 816
+    }
+  },
+  "protocol_sha256": "3f65fe83110489b510fa5787318edcd6fb946f58ae16324260b85a58b9eca503",
+  "synthetic_strict_triples": {
+    "by_profile": {
+      "bilingual": {
+        "mean": 0.9270833333333334,
+        "seed_sample_std": 0.018042195912175804
+      },
+      "chinese": {
+        "mean": 0.5729166666666666,
+        "seed_sample_std": 0.03608439182435161
+      }
+    },
+    "images": 32,
+    "paired_contrasts": {
+      "bilingual_minus_base": {
+        "delta": 0.5520833333333334,
+        "paired_image_bootstrap_ci95": [
+          0.38541666666666663,
+          0.71875
+        ]
+      },
+      "bilingual_minus_chinese": {
+        "delta": 0.35416666666666674,
+        "paired_image_bootstrap_ci95": [
+          0.21875,
+          0.49999999999999994
+        ]
+      },
+      "chinese_minus_base": {
+        "delta": 0.19791666666666663,
+        "paired_image_bootstrap_ci95": [
+          0.05208333333333337,
+          0.34375
+        ]
+      }
+    },
+    "per_arm": {
+      "base": {
+        "accuracy": 0.375,
+        "correct": 12,
+        "denominator": 32
+      },
+      "bilingual-42": {
+        "accuracy": 0.9375,
+        "correct": 30,
+        "denominator": 32
+      },
+      "bilingual-43": {
+        "accuracy": 0.9375,
+        "correct": 30,
+        "denominator": 32
+      },
+      "bilingual-44": {
+        "accuracy": 0.90625,
+        "correct": 29,
+        "denominator": 32
+      },
+      "chinese-42": {
+        "accuracy": 0.59375,
+        "correct": 19,
+        "denominator": 32
+      },
+      "chinese-43": {
+        "accuracy": 0.59375,
+        "correct": 19,
+        "denominator": 32
+      },
+      "chinese-44": {
+        "accuracy": 0.53125,
+        "correct": 17,
+        "denominator": 32
+      }
+    },
+    "per_arm_details": {
+      "base": {
+        "cue_correct": 96,
+        "joint_correct": 63,
+        "target_edit_correct": 20,
+        "valid": 96
+      },
+      "bilingual-42": {
+        "cue_correct": 96,
+        "joint_correct": 92,
+        "target_edit_correct": 32,
+        "valid": 96
+      },
+      "bilingual-43": {
+        "cue_correct": 96,
+        "joint_correct": 93,
+        "target_edit_correct": 31,
+        "valid": 96
+      },
+      "bilingual-44": {
+        "cue_correct": 96,
+        "joint_correct": 92,
+        "target_edit_correct": 31,
+        "valid": 96
+      },
+      "chinese-42": {
+        "cue_correct": 96,
+        "joint_correct": 73,
+        "target_edit_correct": 25,
+        "valid": 96
+      },
+      "chinese-43": {
+        "cue_correct": 96,
+        "joint_correct": 73,
+        "target_edit_correct": 25,
+        "valid": 96
+      },
+      "chinese-44": {
+        "cue_correct": 96,
+        "joint_correct": 70,
+        "target_edit_correct": 25,
+        "valid": 96
+      }
+    },
+    "questions": 32
+  }
+}

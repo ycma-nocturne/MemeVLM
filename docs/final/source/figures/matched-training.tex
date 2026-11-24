@@ -1,0 +1,64 @@
+\documentclass{article}
+\input{figure-style}
+\begin{document}
+\noindent\begin{tikzpicture}[canvas]
+\figbounds
+
+% The thumbnails are actual training inputs from the two supervision pools.
+\node[panelhead,anchor=west] at (7,62.9) {Recipe and example};
+\labelat{panelhead}{86}{62.9}{Supervision pool}
+\labelat{panelhead}{137}{62.9}{Matched exposure}
+
+\fill[bluewash,rounded corners=1mm] (4,44.9) rectangle (162.3,59.3);
+\fill[tealwash,rounded corners=1mm] (4,29.2) rectangle (162.3,43.6);
+\fill[blueedge] (4,45.2) rectangle (5.1,59);
+\fill[tealedge] (4,29.5) rectangle (5.1,43.3);
+\node[titleline,anchor=west,text=navy] at (8,54.3) {Mixed corpus};
+\node[note,anchor=west] at (8,49.75) {Airplane Mode · 2 rows};
+\node[titleline,anchor=west,text=tealedge!80!navy] at (8,38.6) {Replay};
+\node[note,anchor=west] at (8,34.05) {Morning Run · 8 copies};
+\foreach \y/\sample in {52.1/en,36.4/zh}{
+  \node[inner sep=0pt] at (49,\y)
+    {\includegraphics[width=16mm,height=11.9mm,keepaspectratio]{../assets/train-example-\sample.png}};
+}
+\opicon{63}{52.1}{blueedge}{stack}
+\opicon{63}{36.4}{tealedge}{repeat}
+\labelat{labeltext}{87}{55.74}{672 English + 98 Chinese}
+\labelat{note}{87}{51.65}{770 unique rows}
+\labelat{note}{87}{47.68}{Chinese pool shared with replay}
+\labelat{labeltext}{87}{38.55}{$98 \times 7 + 84 = 770$ rows}
+\labelat{note}{87}{34.05}{98 unique Chinese rows}
+\foreach \y in {52.1,36.4}{
+  \draw[flow] (109,\y) -- (117,\y);
+  \labelat{labeltext}{137}{\y+1.95}{\textbf{770 rows/epoch}}
+  \labelat{note}{137}{\y-2.45}{3 epochs per run}
+}
+
+% Both lanes feed the same checkpoint evaluation schedule.
+\draw[draw=slate,line width=.58pt] (162.3,52.1) -- (170.5,52.1) -- (170.5,25.5);
+\draw[draw=slate,line width=.58pt] (162.3,36.4) -- (170.5,36.4);
+\draw[flow] (170.5,25.5) -- (154,25.5);
+
+\opicon{6.4}{25.5}{blueedge}{tune}
+\node[titleline,anchor=west] at (10.7,25.5) {Shared setup};
+\node[labeltext,anchor=west] at (4,20.8) {Qwen3-VL-4B + BF16 LoRA};
+\node[labeltext,anchor=west] at (4,16.5) {Paired seeds 42, 43, 44};
+\node[labeltext,anchor=west] at (4,11.6) {Validation: \textbf{193 rows}};
+\node[note,anchor=west] at (4,7.1) {160 English + 33 Chinese};
+
+% One axis with exact optimizer steps and the selected model.
+\opicon{95}{25.5}{tealedge}{check}
+\labelat{titleline}{123}{25.5}{Evaluate after each epoch}
+\labelat{note}{123}{20.85}{291 optimizer steps per run}
+\draw[flow] (68,13.8) -- (169,13.8);
+\draw[draw=slate,line width=.55pt] (68,12.4) -- (68,15.2);
+\labelat{note}{68}{9.35}{0}
+\foreach \x/\step in {100/97,132/194,164/291}{
+  \fill[navy] (\x,13.8) circle (.68mm);
+  \labelat{labeltext}{\x}{9.2}{\step}
+}
+\draw[draw=ochreedge,line width=.9pt] (100,13.8) circle (1.55mm);
+\labelat{accent}{100}{4.0}{Lowest validation loss in all six runs}
+
+\end{tikzpicture}
+\end{document}
