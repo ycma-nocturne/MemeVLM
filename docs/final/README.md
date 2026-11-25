@@ -1,5 +1,7 @@
 # MemeVLM report, proposal and talk
 
+The [MemeQA follow-up](../../training/gpu/followup/README.md) contains the subsequent real-meme training and confirmation results.
+
 | Artifact | Editable source |
 | --- | --- |
 | [Final report](Final_Report.pdf) | [LaTeX](source/report/) |

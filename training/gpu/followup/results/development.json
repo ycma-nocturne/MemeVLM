@@ -1,0 +1,57 @@
+{
+  "mean_accuracy": {
+    "baseline": 0.5625,
+    "real": 0.7743055555555556,
+    "real-low": 0.7118055555555556
+  },
+  "questions_per_seed": 96,
+  "selected_branch_by_seed": {
+    "42": "real",
+    "43": "real",
+    "44": "real"
+  },
+  "selected_by_arm": {
+    "baseline": {
+      "42": {
+        "correct": 55,
+        "step": 75
+      },
+      "43": {
+        "correct": 52,
+        "step": 25
+      },
+      "44": {
+        "correct": 55,
+        "step": 50
+      }
+    },
+    "real": {
+      "42": {
+        "correct": 74,
+        "step": 97
+      },
+      "43": {
+        "correct": 73,
+        "step": 75
+      },
+      "44": {
+        "correct": 76,
+        "step": 97
+      }
+    },
+    "real-low": {
+      "42": {
+        "correct": 67,
+        "step": 97
+      },
+      "43": {
+        "correct": 69,
+        "step": 97
+      },
+      "44": {
+        "correct": 69,
+        "step": 97
+      }
+    }
+  }
+}

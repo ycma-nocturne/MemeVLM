@@ -15,6 +15,14 @@
 /training/source/scenes.tsv
 /training/source/memexgen-provenance.json
 /training/source/twemoji/
+/training/gpu/followup/inputs/
+/training/gpu/followup/source-archives/
+/training/gpu/followup/**/prepared/
+/training/gpu/followup/**/runs/
+/training/gpu/followup/**/dev-runs/
+/training/gpu/followup/**/test-runs/
+/training/gpu/followup/**/logs/
+/training/gpu/followup/**/compact-results.json.gz
 /training/bilingual/images/
 /training/bilingual/*.jsonl
 /training/bilingual/source/scenes.txt
